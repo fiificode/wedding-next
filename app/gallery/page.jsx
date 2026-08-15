@@ -18,7 +18,7 @@ export default function GalleryPage() {
     <section className="chapter">
       <ChapterSubNav
         chapterLabel="CHAPTER 05"
-        title="Gallery"
+        title="Our Gallery"
         back={{ href: "/rsvp", label: "RSVP" }}
         next={{ href: "/trivia", label: "TRIVIA" }}
       />
@@ -26,7 +26,7 @@ export default function GalleryPage() {
         eyebrow="CHAPTER 05"
         title={
           <>
-            The <em>Gallery</em>
+            Our <em>Gallery</em>
           </>
         }
         lede="Moments captured in time — replace these placeholder tiles with your own photos."
@@ -52,7 +52,7 @@ export default function GalleryPage() {
         <Reveal as="div" delay={0.1} className="share-cta">
           <hr className="rule center" />
           <p className="share-cta-question">Were you at the wedding?</p>
-          <TransitionLink href="/gallery/guest" className="filled-btn">
+          <TransitionLink href="/guest-gallery" className="filled-btn">
             SHARE YOUR PHOTOS
           </TransitionLink>
         </Reveal>

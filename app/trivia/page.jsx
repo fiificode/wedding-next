@@ -9,8 +9,8 @@ export default function TriviaPage() {
       <ChapterSubNav
         chapterLabel="CHAPTER 06"
         title="Trivia"
-        back={{ href: "/gallery", label: "GALLERY" }}
-        next={{ href: "/", label: "COVER" }}
+        back={{ href: "/gallery", label: "OUR GALLERY" }}
+        next={{ href: "/guestbook", label: "GUESTBOOK" }}
       />
       <ChapterHero
         eyebrow="THE ULTIMATE TEST"
@@ -25,9 +25,9 @@ export default function TriviaPage() {
         <Quiz />
       </div>
       <PagBar
-        prev={{ href: "/gallery", label: "GALLERY" }}
+        prev={{ href: "/gallery", label: "OUR GALLERY" }}
         page="06"
-        next={{ href: "/", label: "BACK TO COVER" }}
+        next={{ href: "/guestbook", label: "GUESTBOOK" }}
       />
     </section>
   );

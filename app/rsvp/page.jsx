@@ -11,7 +11,7 @@ export default function RsvpPage() {
         chapterLabel="CHAPTER 04"
         title="RSVP"
         back={{ href: "/registry", label: "REGISTRY" }}
-        next={{ href: "/gallery", label: "GALLERY" }}
+        next={{ href: "/gallery", label: "OUR GALLERY" }}
       />
       <ChapterHero
         eyebrow="CHAPTER 04 — THE INVITATION"
@@ -24,7 +24,7 @@ export default function RsvpPage() {
       <PagBar
         prev={{ href: "/registry", label: "REGISTRY" }}
         page="04"
-        next={{ href: "/gallery", label: "GALLERY" }}
+        next={{ href: "/gallery", label: "OUR GALLERY" }}
       />
     </section>
   );

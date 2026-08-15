@@ -3,3 +3,9 @@ node_modules
 out
 .env*
 .DS_Store
+
+# guest-uploaded photos/videos + manifest (user content, not source)
+/public/guest-uploads/*
+!/public/guest-uploads/.gitkeep
+/data/guest-uploads.json
+/data/guestbook.json
