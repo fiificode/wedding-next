@@ -32,7 +32,7 @@ export default function DoubleDoorInvite() {
           </p>
           <div className="ib-names">[Partner One] &amp; [Partner Two]</div>
           <div className="ib-venue">
-            <b>[VENUE · TIME]</b>
+            <b>[Venue] · 1:00 PM</b>
             [Venue name], [City]
           </div>
           {!open && <div className="ib-tap">TAP TO OPEN</div>}

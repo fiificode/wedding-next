@@ -2,11 +2,11 @@
   --cream: #faf8f5;
   --ink: #1a1a1a;
   --offwhite: #fffef9;
-  --dark: #141311;
-  --accent1: #4361ee;
-  --accent2: #c8b6ff;
-  --accent3: #ffc8dd;
-  --gradient: linear-gradient(90deg, var(--accent1), var(--accent2), var(--accent3));
+  --dark: #101a2b;
+  --accent1: #2f6fed;
+  --accent2: #f2b705;
+  --accent3: #ffd75e;
+  --gradient: linear-gradient(90deg, #2f6fed, #5aa7f2, #ffd75e);
   --border: #e4ddcf;
   --muted: #8a8578;
 }
@@ -57,8 +57,8 @@ button {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(60% 50% at 85% 10%, rgba(200, 182, 255, 0.18), transparent 70%),
-    radial-gradient(55% 45% at 15% 90%, rgba(255, 200, 221, 0.14), transparent 70%);
+  background: radial-gradient(60% 50% at 85% 10%, rgba(47, 111, 237, 0.18), transparent 70%),
+    radial-gradient(55% 45% at 15% 90%, rgba(255, 215, 94, 0.16), transparent 70%);
 }
 .gradient-text {
   background: var(--gradient);
@@ -363,7 +363,7 @@ button {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(180deg, rgba(20, 19, 17, 0.55), rgba(20, 19, 17, 0.75));
+  background: linear-gradient(180deg, rgba(11, 20, 38, 0.55), rgba(11, 20, 38, 0.75));
   pointer-events: none;
 }
 .cover > *:not(.cover-bg):not(.cover-overlay):not(.cover-meta-top):not(.cover-meta-inside) {
@@ -588,22 +588,22 @@ button {
   border-radius: 3px;
 }
 .tph-1 {
-  background: linear-gradient(160deg, #4361ee, #2c3fae);
+  background: linear-gradient(160deg, #2f6fed, #1d4ed8);
 }
 .tph-2 {
-  background: linear-gradient(160deg, #c8b6ff, #8f78d6);
+  background: linear-gradient(160deg, #7cc0f7, #4a90e2);
 }
 .tph-3 {
-  background: linear-gradient(160deg, #ffc8dd, #e094ad);
+  background: linear-gradient(160deg, #ffd75e, #f2b705);
 }
 .tph-4 {
-  background: linear-gradient(160deg, #2c2a26, #141311);
+  background: linear-gradient(160deg, #1d2b45, #0e1830);
 }
 .tph-5 {
   background: linear-gradient(160deg, #e3dccb, #c9bfa5);
 }
 .tph-6 {
-  background: linear-gradient(160deg, #8f78d6, #4361ee);
+  background: linear-gradient(160deg, #1d4ed8, #2f6fed);
 }
 
 /* ---------- chapter shell ---------- */
@@ -691,7 +691,7 @@ button {
   border-radius: 2px;
 }
 .chapter.on-dark .moment-media {
-  border-color: rgba(200, 182, 255, 0.4);
+  border-color: rgba(95, 167, 242, 0.4);
 }
 .moment-media img,
 .moment-media .media-ph {
@@ -967,23 +967,23 @@ button {
   text-transform: uppercase;
 }
 .tile-ph.g1 {
-  background: linear-gradient(160deg, #4361ee, #2c3fae);
+  background: linear-gradient(160deg, #2f6fed, #1d4ed8);
 }
 .tile-ph.g2 {
-  background: linear-gradient(160deg, #c8b6ff, #8f78d6);
+  background: linear-gradient(160deg, #7cc0f7, #4a90e2);
 }
 .tile-ph.g3 {
-  background: linear-gradient(160deg, #ffc8dd, #e094ad);
+  background: linear-gradient(160deg, #ffd75e, #f2b705);
 }
 .tile-ph.g4 {
-  background: linear-gradient(160deg, #2c2a26, #141311);
+  background: linear-gradient(160deg, #1d2b45, #0e1830);
 }
 .tile-ph.g5 {
   background: linear-gradient(160deg, #e3dccb, #c9bfa5);
   color: #1a1a1a;
 }
 .tile-ph.g6 {
-  background: linear-gradient(160deg, #8f78d6, #4361ee);
+  background: linear-gradient(160deg, #1d4ed8, #2f6fed);
 }
 .gallery-caption {
   display: flex;
@@ -1041,8 +1041,8 @@ button {
   justify-content: center;
   text-align: center;
   padding: 40px 34px;
-  background-image: radial-gradient(circle at 12% 10%, rgba(255, 200, 221, 0.35), transparent 40%),
-    radial-gradient(circle at 88% 92%, rgba(200, 182, 255, 0.3), transparent 40%);
+  background-image: radial-gradient(circle at 12% 10%, rgba(255, 215, 94, 0.35), transparent 40%),
+    radial-gradient(circle at 88% 92%, rgba(47, 111, 237, 0.3), transparent 40%);
 }
 .invite-back-card .ib-logo {
   font-family: var(--font-serif);
@@ -1089,7 +1089,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(160deg, #1c1a17, #0e0d0b);
+  background: linear-gradient(160deg, #16233f, #0b1326);
   color: var(--offwhite);
 }
 .invite-door-left {
@@ -1225,7 +1225,7 @@ button {
 }
 .quiz-option:hover {
   border-color: var(--accent2);
-  background: #f5f0ff;
+  background: #fdf6e0;
 }
 .quiz-option.correct {
   border-color: #4caf6d;

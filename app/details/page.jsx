@@ -28,7 +28,7 @@ const EVENTS = [
     title: "The White Wedding",
     text: "The formal ceremony, followed by a reception — all details your guests need to plan around.",
     fields: [
-      ["DATE & TIME", "[Day], [Date]", "[Time]"],
+      ["DATE & TIME", "Saturday, October 10", "1:00 PM"],
       ["VENUE", "[Church / venue name]", "[Address, city]"],
       ["DRESS CODE", "[Formal / cocktail attire]", "[Colors to avoid, if any]"],
     ],
@@ -76,8 +76,8 @@ export default function DetailsPage() {
           <div className="countdown-panel">
             <div className="eyebrow">CEREMONY TWO</div>
             <h4>White Wedding</h4>
-            <div className="cd-meta">[Day], [Date] · [Time]</div>
-            <Countdown date="2026-12-03T12:00:00" />
+            <div className="cd-meta">Saturday, October 10 · 1:00 PM</div>
+            <Countdown date="2026-10-10T13:00:00" />
           </div>
         </div>
       </div>

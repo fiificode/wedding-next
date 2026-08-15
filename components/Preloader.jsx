@@ -31,7 +31,7 @@ export default function Preloader() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            A &amp; B
+            A &amp; A
           </motion.span>
         </motion.div>
       )}

@@ -21,9 +21,9 @@ export default function ContentsPage() {
           <p>A celebration in six chapters — swap this copy for your own.</p>
         </Reveal>
         <Reveal as="div" delay={0.08} className="date-badge">
-          <div className="d1">[DAY]</div>
-          <div className="d2">[Date]</div>
-          <div className="d3">[YEAR]</div>
+          <div className="d1">SATURDAY</div>
+          <div className="d2">October 10</div>
+          <div className="d3">2026</div>
         </Reveal>
 
         <TocList chapters={CHAPTERS} />

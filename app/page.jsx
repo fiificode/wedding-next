@@ -9,11 +9,11 @@ export default function CoverPage() {
       <Image src={couple} alt="" fill priority className="cover-bg" sizes="100vw" />
       <div className="cover-overlay" />
       <Reveal as="div" delay={0.1} className="cover-meta-top">
-        Summer 2026
+        Autumn 2026
         <br />
         Issue No. 1
         <br />
-        [Your City]
+        Accra
       </Reveal>
       <Reveal as="div" delay={0.15} className="cover-meta-inside">
         <div className="k">INSIDE</div>
@@ -24,20 +24,20 @@ export default function CoverPage() {
       </Reveal>
 
       <Reveal as="div" delay={0} className="masthead">
-        <div className="logo">A &amp; B</div>
+        <div className="logo">A &amp; A</div>
         <div className="tag">THE WEDDING ISSUE</div>
         <div className="hashtag gradient-text">#YOURHASHTAG</div>
       </Reveal>
 
       <div className="cover-names">
         <Reveal as="h1" delay={0.2}>
-          <em>[Partner One]</em>
+          <em>Akoi</em>
         </Reveal>
         <Reveal as="h1" delay={0.26}>
-          <span className="and">&amp;</span> <span className="partner2">[Partner Two]</span>
+          <span className="and">&amp;</span> <span className="partner2">Afua</span>
         </Reveal>
         <Reveal as="div" delay={0.32} className="cover-sub">
-          [WEDDING DATE]
+          October 10, 2026
         </Reveal>
         <Reveal as="div" delay={0.38} className="cover-line">
           A celebration of
