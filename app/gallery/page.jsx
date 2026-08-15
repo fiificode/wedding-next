@@ -2,6 +2,7 @@ import ChapterHero from "@/components/ChapterHero";
 import PagBar from "@/components/PagBar";
 import Reveal from "@/components/Reveal";
 import ChapterSubNav from "@/components/ChapterSubNav";
+import TransitionLink from "@/components/TransitionLink";
 
 const PHOTOS = [
   { ph: "tph-1", caption: "Where it all began", sub: "[Location] · [Year]" },
@@ -47,6 +48,14 @@ export default function GalleryPage() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal as="div" delay={0.1} className="share-cta">
+          <hr className="rule center" />
+          <p className="share-cta-question">Were you at the wedding?</p>
+          <TransitionLink href="/gallery/guest" className="filled-btn">
+            SHARE YOUR PHOTOS
+          </TransitionLink>
+        </Reveal>
       </div>
       <PagBar
         prev={{ href: "/rsvp", label: "RSVP" }}

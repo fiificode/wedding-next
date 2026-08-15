@@ -288,6 +288,7 @@ button {
   display: flex;
   justify-content: flex-end;
   padding: 26px 34px;
+  pointer-events: none;
 }
 .hamburger {
   width: 34px;
@@ -297,6 +298,7 @@ button {
   justify-content: center;
   gap: 6px;
   color: inherit;
+  pointer-events: auto;
 }
 .hamburger span {
   display: block;
@@ -1018,6 +1020,95 @@ button {
   .gallery-item:nth-child(even) {
     margin-top: 0;
   }
+}
+
+.share-cta {
+  text-align: center;
+  margin-top: 80px;
+}
+.share-cta .rule {
+  margin-left: auto;
+  margin-right: auto;
+}
+.share-cta-question {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+.filled-btn {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--offwhite);
+  padding: 16px 34px;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  border-radius: 2px;
+  transition: opacity 0.2s;
+}
+.filled-btn:hover {
+  opacity: 0.85;
+}
+.share-cta-note {
+  margin-top: 22px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* photo upload (guest gallery) */
+.photo-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.photo-upload-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.photo-upload-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+  width: 100%;
+  max-width: 640px;
+  margin-top: 32px;
+}
+.photo-upload-item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--dark);
+}
+.photo-upload-item img,
+.photo-upload-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.photo-upload-remove {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(20, 19, 17, 0.75);
+  color: var(--offwhite);
+  font-size: 1rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.photo-upload-remove:hover {
+  background: rgba(20, 19, 17, 0.95);
 }
 
 /* rsvp invitation — double doors sliding open */
