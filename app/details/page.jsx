@@ -1,12 +1,15 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import ChapterHero from "@/components/ChapterHero";
 import PagBar from "@/components/PagBar";
 import Reveal from "@/components/Reveal";
 import ChapterSubNav from "@/components/ChapterSubNav";
 import ScrollRail from "@/components/ScrollRail";
 import Countdown from "@/components/Countdown";
+import traditionalWedding from "@/assets/traditionalWedding.jpg";
+import whiteWedding from "@/assets/whiteWedding.jpeg";
 
 const EVENTS = [
   {
@@ -15,9 +18,10 @@ const EVENTS = [
     title: "The Traditional Ceremony",
     text: "Join us as we honor our roots with a beautiful traditional wedding ceremony — customs, colors, and joyful celebration.",
     inviteOnly: true,
+    img: traditionalWedding,
     fields: [
-      ["DATE & TIME", "[Day], [Date]", "[Time]"],
-      ["VENUE", "[Venue name]", "[City / region]"],
+      ["DATE & TIME", "Friday, October 9", "10:00 AM"],
+      ["VENUE", "Presbyterian Church of Ghana", "Kaneshie Congregation, Kaneshie, Accra"],
       ["DRESS CODE", "[Traditional attire]", "[Notes on fabric / color]"],
     ],
     ph: "tph-3",
@@ -27,9 +31,10 @@ const EVENTS = [
     eyebrow: "CEREMONY TWO",
     title: "The White Wedding",
     text: "The formal ceremony, followed by a reception — all details your guests need to plan around.",
+    img: whiteWedding,
     fields: [
       ["DATE & TIME", "Saturday, October 10", "1:00 PM"],
-      ["VENUE", "[Church / venue name]", "[Address, city]"],
+      ["VENUE", "Presbyterian Church of Ghana", "Kaneshie Congregation, Kaneshie, Accra"],
       ["DRESS CODE", "[Formal / cocktail attire]", "[Colors to avoid, if any]"],
     ],
     actions: [
@@ -70,8 +75,8 @@ export default function DetailsPage() {
           <div className="countdown-panel">
             <div className="eyebrow">CEREMONY ONE</div>
             <h4>Traditional Ceremony</h4>
-            <div className="cd-meta">[Day], [Date] · [Time]</div>
-            <Countdown date="2026-12-01T09:00:00" />
+            <div className="cd-meta">Friday, October 9 · 10:00 AM</div>
+            <Countdown date="2026-10-09T10:00:00" />
           </div>
           <div className="countdown-panel">
             <div className="eyebrow">CEREMONY TWO</div>
@@ -88,7 +93,9 @@ export default function DetailsPage() {
           {EVENTS.map((ev, i) => (
             <Reveal as="div" delay={0} className={`detail-block ${i % 2 === 1 ? "reverse" : ""}`} key={ev.title}>
               <div className="moment-media">
-                <div className={`media-ph ${ev.ph}`}>Replace with photo</div>
+                <div className="moment-frame">
+                  <Image src={ev.img} alt={ev.title} fill sizes="(max-width: 700px) 100vw, 50vw" priority={i === 0} />
+                </div>
                 <div className="moment-tag">
                   <span className="tag-rule" />
                   {ev.tag}

@@ -23,7 +23,7 @@ export default function ChapterSubNav({ chapterLabel, title, back, next }) {
   return (
     <div className={`chapter-subnav ${show ? "show" : ""}`}>
       <TransitionLink href={back.href} className="subnav-side">
-        <span className="subnav-brand">K&amp;J</span>
+        <span className="subnav-brand">A&amp;A</span>
         <span className="subnav-sep">·</span>
         {back.label}
       </TransitionLink>

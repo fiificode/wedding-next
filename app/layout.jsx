@@ -27,15 +27,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
-      <body style={{ fontFamily: "var(--font-sans), ui-sans-serif, system-ui, sans-serif" }}>
+      <body
+        style={{
+          fontFamily: "var(--font-sans), ui-sans-serif, system-ui, sans-serif",
+        }}
+      >
         <Preloader />
         <CustomCursor />
         <TransitionProvider>
           <Nav />
           {children}
-          <footer className="sitefoot">
+          {/* <footer className="sitefoot">
             TEMPLATE — REPLACE ALL BRACKETED TEXT WITH YOUR OWN DETAILS
-          </footer>
+          </footer> */}
         </TransitionProvider>
       </body>
     </html>

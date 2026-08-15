@@ -32,8 +32,8 @@ export default function DoubleDoorInvite() {
           </p>
           <div className="ib-names">[Partner One] &amp; [Partner Two]</div>
           <div className="ib-venue">
-            <b>[Venue] · 1:00 PM</b>
-            [Venue name], [City]
+            <b>Presbyterian Church of Ghana · 1:00 PM</b>
+            Kaneshie Congregation, Kaneshie, Accra
           </div>
           {!open && <div className="ib-tap">TAP TO OPEN</div>}
         </div>
