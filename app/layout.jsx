@@ -19,9 +19,9 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Akoi & Afua — The Wedding Issue",
+  title: "Akoi & Afua — Our Wedding",
   description:
-    "A digital-magazine style wedding website for Akoi and Afua's wedding, built in Next.js.",
+    "A classic wedding website for Akoi and Afua's wedding, built in Next.js.",
 };
 
 export default function RootLayout({ children }) {

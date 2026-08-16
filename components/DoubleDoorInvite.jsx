@@ -25,7 +25,7 @@ export default function DoubleDoorInvite() {
         data-cursor-hover
       >
         <div className="invite-back-card">
-          <div className="ib-logo">A &amp; B</div>
+          <div className="ib-logo">A &amp; A</div>
           <p className="ib-formal">
             IN THE PRESENCE OF GOD AND OUR LOVED ONES, WE,
           </p>
@@ -51,7 +51,7 @@ export default function DoubleDoorInvite() {
         >
           <div className="door-inner">
             <div className="we-do">we</div>
-            <div className="door-names">[Partner One]</div>
+            <div className="door-names">Akoi</div>
           </div>
         </motion.div>
 
@@ -62,7 +62,7 @@ export default function DoubleDoorInvite() {
         >
           <div className="door-inner">
             <div className="we-do">do</div>
-            <div className="door-names">[Partner Two]</div>
+            <div className="door-names">Afua</div>
           </div>
         </motion.div>
       </div>

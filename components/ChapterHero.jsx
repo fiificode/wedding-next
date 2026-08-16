@@ -1,10 +1,9 @@
 import Reveal from "@/components/Reveal";
 
-export default function ChapterHero({ eyebrow, title, lede, meta, dark }) {
+export default function ChapterHero({ eyebrow, title, lede, meta }) {
   return (
-    <div className={`chapter-hero ${dark ? "hero-dark" : ""}`}>
-      <div className={`dotgrid ${dark ? "on-dark" : ""}`} />
-      {dark && <div className="glow" />}
+    <div className="chapter-hero">
+      <div className="dotgrid" />
       <div style={{ position: "relative" }}>
         <Reveal as="div" delay={0} className="eyebrow accent">
           {eyebrow}

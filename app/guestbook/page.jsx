@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import ChapterHero from "@/components/ChapterHero";
 import PagBar from "@/components/PagBar";
 import Reveal from "@/components/Reveal";
-import ChapterSubNav from "@/components/ChapterSubNav";
 import GuestbookForm from "@/components/GuestbookForm";
 
 function formatDate(iso) {
@@ -45,21 +44,14 @@ export default function GuestbookPage() {
 
   return (
     <section className="chapter">
-      <ChapterSubNav
-        chapterLabel="CHAPTER 06"
-        title="Guestbook"
-        back={{ href: "/guest-gallery", label: "GUEST GALLERY" }}
-        next={{ href: "/vendors", label: "VENDORS" }}
-      />
       <ChapterHero
-        eyebrow="CHAPTER 06"
+        eyebrow="WORDS FOR THE COUPLE"
         title={
           <>
             Sign Our <em>Guestbook</em>
           </>
         }
         lede="Words of love, laughter, and well wishes from those who matter most."
-        dark
       />
       <div className="chapter-body chapter-spaced">
         <Reveal as="div" delay={0.1} className="guestbook-cta-wrap">
@@ -90,7 +82,6 @@ export default function GuestbookPage() {
       </div>
       <PagBar
         prev={{ href: "/guest-gallery", label: "GUEST GALLERY" }}
-        page="06"
         next={{ href: "/vendors", label: "FOR OUR VENDORS" }}
       />
     </section>

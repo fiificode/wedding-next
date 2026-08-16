@@ -6,77 +6,56 @@ import couple from "@/assets/couple.jpg";
 export default function CoverPage() {
   return (
     <section className="cover">
-      <Image
-        src={couple}
-        alt=""
-        fill
-        priority
-        className="cover-bg"
-        sizes="100vw"
-      />
-      <div className="cover-overlay" />
-      <Reveal as="div" delay={0.1} className="cover-meta-top">
-        Autumn 2026
-        <br />
-        Issue No. 1
-        <br />
-        Accra
-      </Reveal>
-      <Reveal as="div" delay={0.15} className="cover-meta-inside">
-        <div className="k">INSIDE</div>
-        <div className="story-title">Our Love Story</div>
-        <div style={{ fontSize: ".8rem", opacity: 0.75 }}>
-          How it all began, in your own words
-        </div>
-        <div className="k" style={{ marginTop: 14 }}>
-          PLUS
-        </div>
-        <div className="story-title">An Intimate Gallery</div>
-      </Reveal>
+      <aside className="cover-sidebar">
+        <Reveal as="div" delay={0.1} className="cover-sidebar-text">
+          October 10 · 2026
+        </Reveal>
+      </aside>
 
-      <Reveal as="div" delay={0} className="masthead">
-        <div className="logo">A &amp; A</div>
-        <div className="tag">THE WEDDING ISSUE</div>
-        <div className="hashtag gradient-text">#AkoiAfua2026</div>
-      </Reveal>
+      <div className="cover-hero">
+        <Image
+          src={couple}
+          alt=""
+          fill
+          priority
+          className="cover-bg"
+          sizes="100vw"
+        />
+        <div className="cover-overlay" />
 
-      <div className="cover-names">
-        <Reveal as="h1" delay={0.2}>
-          <em>Akoi</em>
+        <Reveal as="div" delay={0.15} className="cover-meta-top">
+          Accra, Ghana
         </Reveal>
-        <Reveal as="h1" delay={0.26}>
-          <span className="and">&amp;</span>{" "}
-          <span className="partner2">Afua</span>
-        </Reveal>
-        <Reveal as="div" delay={0.32} className="cover-sub">
-          October 10, 2026
-        </Reveal>
-        <Reveal as="div" delay={0.38} className="cover-line">
-          A celebration of
-          <br />
-          <span className="accent">love</span> &amp;{" "}
-          <span className="pink">forever</span>
-        </Reveal>
-        <Reveal
-          as={TransitionLink}
-          delay={0.46}
-          href="/contents"
-          className="open-issue"
-        >
-          OPEN ISSUE
-        </Reveal>
+
+        <div className="cover-names">
+          <Reveal as="h1" delay={0.2}>
+            <em>Akoi</em>
+          </Reveal>
+          <Reveal as="h1" delay={0.26}>
+            <span className="and">&amp;</span>{" "}
+            <span className="partner2">Afua</span>
+          </Reveal>
+          <Reveal as="div" delay={0.32} className="cover-hashtag gradient-text">
+            #AkoiAfua2026
+          </Reveal>
+          <Reveal as="div" delay={0.38} className="cover-line">
+            A celebration of{" "}
+            <span className="accent">love</span> &amp;{" "}
+            <span className="pink">forever</span>.
+          </Reveal>
+          <Reveal
+            as={TransitionLink}
+            delay={0.46}
+            href="/story"
+            className="open-issue"
+          >
+            Enter Our Wedding
+            <span className="arrow" aria-hidden="true">
+              →
+            </span>
+          </Reveal>
+        </div>
       </div>
-
-      <Reveal as="div" delay={0.5} className="cover-footer">
-        <div className="links">
-          <TransitionLink href="/story">The Love Story</TransitionLink>·
-          <TransitionLink href="/gallery">Photo Gallery</TransitionLink>·
-          <TransitionLink href="/details">Wedding Details</TransitionLink>·
-          <TransitionLink href="/rsvp">RSVP</TransitionLink>·
-          <TransitionLink href="/trivia">Trivia</TransitionLink>
-        </div>
-        <div>COVER</div>
-      </Reveal>
     </section>
   );
 }

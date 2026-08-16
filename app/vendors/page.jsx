@@ -1,7 +1,6 @@
 import ChapterHero from "@/components/ChapterHero";
 import PagBar from "@/components/PagBar";
 import Reveal from "@/components/Reveal";
-import ChapterSubNav from "@/components/ChapterSubNav";
 
 const CONTACT = {
   name: "[Coordinator Name]",
@@ -71,21 +70,14 @@ const GOOD_TO_KNOW = [
 export default function VendorsPage() {
   return (
     <section className="chapter">
-      <ChapterSubNav
-        chapterLabel="CHAPTER 07"
-        title="For Our Vendors"
-        back={{ href: "/guestbook", label: "GUESTBOOK" }}
-        next={{ href: "/contents", label: "CONTENTS" }}
-      />
       <ChapterHero
-        eyebrow="CHAPTER 06"
+        eyebrow="PLANNING & LOGISTICS"
         title={
           <>
             For Our <em>Vendors</em>
           </>
         }
         lede="Everything your team needs for load-in, timing, and logistics on the day."
-        dark
       />
 
       <div className="chapter-body chapter-spaced">
@@ -187,7 +179,6 @@ export default function VendorsPage() {
 
       <PagBar
         prev={{ href: "/guestbook", label: "GUESTBOOK" }}
-        page="07"
         next={{ href: "/", label: "BACK TO COVER" }}
       />
     </section>

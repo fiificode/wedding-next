@@ -1,7 +1,6 @@
 import ChapterHero from "@/components/ChapterHero";
 import PagBar from "@/components/PagBar";
 import Reveal from "@/components/Reveal";
-import ChapterSubNav from "@/components/ChapterSubNav";
 
 const REGISTRIES = [
   { title: "[Registry 1]", sub: "e.g. Home & Kitchen" },
@@ -12,21 +11,14 @@ const REGISTRIES = [
 export default function RegistryPage() {
   return (
     <section className="chapter">
-      <ChapterSubNav
-        chapterLabel="CHAPTER 03"
-        title="Registry"
-        back={{ href: "/details", label: "DETAILS" }}
-        next={{ href: "/rsvp", label: "RSVP" }}
-      />
       <ChapterHero
-        eyebrow="CHAPTER 03"
+        eyebrow="WITH GRATITUDE"
         title={
           <>
             The <em>Registry</em>
           </>
         }
         lede="Your presence is the gift — but if you'd like to give more."
-        dark
       />
       <div className="chapter-body">
         <div className="registry-grid">
@@ -40,7 +32,6 @@ export default function RegistryPage() {
       </div>
       <PagBar
         prev={{ href: "/details", label: "THE DETAILS" }}
-        page="03"
         next={{ href: "/rsvp", label: "RSVP" }}
       />
     </section>

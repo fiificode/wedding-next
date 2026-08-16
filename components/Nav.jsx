@@ -1,49 +1,46 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 import TransitionLink from "@/components/TransitionLink";
 
 const LINKS = [
   { href: "/", label: "Cover" },
-  { href: "/contents", label: "Contents" },
-  { href: "/story", label: "Our Story", chapter: "Chapter 01" },
-  { href: "/gallery", label: "Our Gallery", chapter: "Chapter 02" },
-  { href: "/details", label: "The Details", chapter: "Chapter 03" },
-  { href: "/rsvp", label: "RSVP", chapter: "Chapter 04" },
+  { href: "/story", label: "Our Story" },
+  { href: "/gallery", label: "Our Gallery" },
+  { href: "/details", label: "The Details" },
+  { href: "/rsvp", label: "RSVP" },
   { href: "/guest-gallery", label: "Guest Gallery" },
-  { href: "/guestbook", label: "Guestbook", chapter: "Chapter 05" },
+  { href: "/guestbook", label: "Guestbook" },
   { href: "/vendors", label: "For Our Vendors" },
-  // { href: "/trivia", label: "Trivia", chapter: "Chapter 05" },
-  // { href: "/registry", label: "The Registry", chapter: "Chapter 03" },
 ];
+
+const DESKTOP_LINKS = LINKS.filter((l) => l.href !== "/");
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-
-  useEffect(() => {
-    function onScroll() {
-      setScrolled(window.scrollY > 380);
-    }
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  // White hamburger over the dark cover + dark hero sections; dark once
-  // scrolled into light content (except pages that are dark throughout).
-  const light =
-    pathname === "/" ||
-    pathname === "/rsvp" ||
-    (pathname !== "/contents" && !scrolled);
+  const light = pathname === "/";
 
   return (
     <>
-      <nav className="topnav">
+      <nav className={`site-nav ${light ? "light" : ""}`}>
+        <TransitionLink href="/" className="site-nav-brand">
+          A&nbsp;&amp;&nbsp;A
+        </TransitionLink>
+        <div className="site-nav-links">
+          {DESKTOP_LINKS.map((link) => (
+            <TransitionLink
+              key={link.href}
+              href={link.href}
+              className={pathname === link.href ? "active" : ""}
+            >
+              {link.label}
+            </TransitionLink>
+          ))}
+        </div>
         <button
-          className={`hamburger ${light ? "light" : ""}`}
+          className="hamburger"
           aria-label="Open menu"
           onClick={() => setOpen(true)}
         >
@@ -68,7 +65,6 @@ export default function Nav() {
             onClick={() => setOpen(false)}
           >
             {link.label}
-            {link.chapter && <small>{link.chapter}</small>}
           </TransitionLink>
         ))}
       </div>

@@ -6,8 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 /**
  * Shown once per app session (state lives in this client component, which
  * mounts once at the root layout and persists across client-side route
- * changes) — matches the reference site only showing its loader on a hard
- * page load, not on every "Open Issue" style navigation.
+ * changes) — only shows on a hard page load, not on every in-app navigation.
  */
 export default function Preloader() {
   const [loading, setLoading] = useState(true);

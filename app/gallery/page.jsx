@@ -1,40 +1,32 @@
 import ChapterHero from "@/components/ChapterHero";
 import PagBar from "@/components/PagBar";
 import Reveal from "@/components/Reveal";
-import ChapterSubNav from "@/components/ChapterSubNav";
 import TransitionLink from "@/components/TransitionLink";
 
 const PHOTOS = [
-  { ph: "tph-1", caption: "Where it all began", sub: "[Location] · [Year]" },
+  { ph: "tph-1", caption: "Where it all began", sub: "From the very first hello" },
   {
     ph: "tph-2",
     caption: "From friends to forever",
-    sub: "[Location] · [Year]",
+    sub: "Chapter by chapter",
   },
-  { ph: "tph-3", caption: "The proposal", sub: "[Location] · [Year]" },
-  { ph: "tph-4", caption: "Engagement shoot", sub: "[Location] · [Year]" },
-  { ph: "tph-5", caption: "Family celebrations", sub: "[Location] · [Year]" },
-  { ph: "tph-6", caption: "Getting ready", sub: "[Location] · [Year]" },
+  { ph: "tph-3", caption: "The proposal", sub: "The question that changed everything" },
+  { ph: "tph-4", caption: "Engagement shoot", sub: "One day closer to forever" },
+  { ph: "tph-5", caption: "Family celebrations", sub: "Surrounded by love" },
+  { ph: "tph-6", caption: "Getting ready", sub: "The calm before the aisle" },
 ];
 
 export default function GalleryPage() {
   return (
     <section className="chapter">
-      <ChapterSubNav
-        chapterLabel="CHAPTER 02"
-        title="Our Gallery"
-        back={{ href: "/story", label: "OUR STORY" }}
-        next={{ href: "/details", label: "THE DETAILS" }}
-      />
       <ChapterHero
-        eyebrow="CHAPTER 02"
+        eyebrow="MOMENTS WE TREASURE"
         title={
           <>
             Our <em>Gallery</em>
           </>
         }
-        lede="Moments captured in time — replace these placeholder tiles with your own photos."
-        dark
+        lede="Moments captured in time — a peek into the story so far, with plenty more to come."
       />
       <div className="chapter-body">
         <div className="gallery-grid">
@@ -71,7 +63,6 @@ export default function GalleryPage() {
       </div>
       <PagBar
         prev={{ href: "/story", label: "OUR STORY" }}
-        page="02"
         next={{ href: "/details", label: "THE DETAILS" }}
       />
     </section>

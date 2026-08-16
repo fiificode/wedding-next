@@ -1,45 +1,47 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import ChapterHero from "@/components/ChapterHero";
 import PagBar from "@/components/PagBar";
 import Reveal from "@/components/Reveal";
-import ChapterSubNav from "@/components/ChapterSubNav";
 import ScrollRail from "@/components/ScrollRail";
+import couple from "@/assets/couple.jpg";
+import traditionalWedding from "@/assets/traditionalWedding.jpg";
 
 const MOMENTS = [
   {
     year: "[YEAR]",
-    tag: "Chapter 01 · The Beginning",
-    eyebrow: "IN [PARTNER ONE]'S WORDS",
+    tag: "The Beginning",
+    eyebrow: "IN AKOI'S WORDS",
     title: "How We Met",
-    text: "Placeholder — describe the moment you met. One or two sentences is plenty; let the photos on the Gallery chapter do the rest.",
-    callout: "[A one-line quote or callout about this moment]",
-    ph: "tph-1",
+    text: "Two paths in Accra, one unexpected meeting. What began as a chance introduction soon became the start of a story neither of us saw coming — and the one we'll be telling for the rest of our lives.",
+    callout: "Some meetings feel written in advance.",
+    img: couple,
   },
   {
     year: "[YEAR]",
-    tag: "Chapter 01 · The Same Day",
+    tag: "The Same Day",
     eyebrow: "THE GROWING BOND",
     title: "From Strangers to Friends",
-    text: "Placeholder — how did the friendship develop? What turned casual encounters into something more?",
+    text: "What started as small talk became long conversations, shared laughter, and a friendship neither of us could imagine being without. Somewhere along the way, 'just friends' quietly turned into something more.",
     ph: "tph-2",
   },
   {
     year: "[YEAR]",
-    tag: "Chapter 02 · Falling",
-    eyebrow: "IN [PARTNER TWO]'S WORDS",
+    tag: "Falling",
+    eyebrow: "IN AFUA'S WORDS",
     title: "The First Date",
-    text: "Placeholder — where did you go, what did you talk about, what made you know?",
-    ph: "tph-3",
+    text: "An afternoon that felt like it was over before it began. Hours disappeared into conversation, and by the time we said goodbye, we both knew this wasn't a one-time thing — it was a beginning.",
+    img: traditionalWedding,
   },
   {
     year: "[YEAR]",
-    tag: "Chapter 03 · Forever",
+    tag: "Forever",
     eyebrow: "THE QUESTION",
     title: "The Proposal",
-    text: "Placeholder — this is usually the emotional high point of the chapter. Take your time with it.",
-    callout: "[Where / how it happened, in one line]",
+    text: "With family in our hearts and a future in mind, Akoi asked the question that would change everything. Afua said yes — and October 10, 2026 became the date we've been counting down to ever since.",
+    callout: "She said yes — and forever began.",
     ph: "tph-4",
   },
 ];
@@ -49,22 +51,15 @@ export default function StoryPage() {
 
   return (
     <section className="chapter">
-      <ChapterSubNav
-        chapterLabel="CHAPTER 01"
-        title="Our Story"
-        back={{ href: "/contents", label: "CONTENTS" }}
-        next={{ href: "/details", label: "DETAILS" }}
-      />
       <ChapterHero
-        eyebrow="CHAPTER 01"
+        eyebrow="HOW IT ALL BEGAN"
         title={
           <>
             Our <em>Story</em>
           </>
         }
-        lede="Replace this with the line that captures how you met — keep it short and a little cinematic."
-        meta="[MEETING DATE] · [PLACE YOU MET]"
-        dark
+        lede="Two lives in Accra, one love story. Ours began with a hello and continues on October 10, 2026."
+        meta="ACCRA, GHANA"
       />
       <div
         className="chapter-body"
@@ -81,7 +76,19 @@ export default function StoryPage() {
               key={m.title}
             >
               <div className="moment-media">
-                <div className={`media-ph ${m.ph}`}>Replace with photo</div>
+                {m.img ? (
+                  <div className="moment-frame">
+                    <Image
+                      src={m.img}
+                      alt={m.title}
+                      fill
+                      sizes="(max-width: 700px) 100vw, 50vw"
+                      priority={i === 0}
+                    />
+                  </div>
+                ) : (
+                  <div className={`media-ph ${m.ph}`}>Photo coming soon</div>
+                )}
                 <div className="moment-tag">
                   <span className="tag-rule" />
                   {m.tag}
@@ -102,8 +109,7 @@ export default function StoryPage() {
         </div>
       </div>
       <PagBar
-        prev={{ href: "/contents", label: "CONTENTS" }}
-        page="01"
+        prev={{ href: "/", label: "COVER" }}
         next={{ href: "/gallery", label: "OUR GALLERY" }}
       />
     </section>

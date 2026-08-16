@@ -5,7 +5,6 @@ import Image from "next/image";
 import ChapterHero from "@/components/ChapterHero";
 import PagBar from "@/components/PagBar";
 import Reveal from "@/components/Reveal";
-import ChapterSubNav from "@/components/ChapterSubNav";
 import ScrollRail from "@/components/ScrollRail";
 import Countdown from "@/components/Countdown";
 import traditionalWedding from "@/assets/traditionalWedding.jpg";
@@ -16,7 +15,7 @@ const EVENTS = [
     tag: "Event 01 — A Celebration of Heritage",
     eyebrow: "CEREMONY ONE",
     title: "The Traditional Ceremony",
-    text: "Join us as we honor our roots with a beautiful traditional wedding ceremony — customs, colors, and joyful celebration.",
+    text: "A celebration of heritage, customs, and color — honoring our roots with the families who raised us.",
     inviteOnly: true,
     img: traditionalWedding,
     fields: [
@@ -34,7 +33,7 @@ const EVENTS = [
     tag: "Event 02 — A Sacred Union",
     eyebrow: "CEREMONY TWO",
     title: "The White Wedding",
-    text: "The formal ceremony, followed by a reception — all details your guests need to plan around.",
+    text: "The formal ceremony and reception — where we say our vows before God and the people we love most.",
     img: whiteWedding,
     fields: [
       ["DATE & TIME", "Saturday, October 10", "1:00 PM"],
@@ -58,21 +57,14 @@ export default function DetailsPage() {
 
   return (
     <section className="chapter">
-      <ChapterSubNav
-        chapterLabel="CHAPTER 03"
-        title="Details"
-        back={{ href: "/gallery", label: "OUR GALLERY" }}
-        next={{ href: "/rsvp", label: "RSVP" }}
-      />
       <ChapterHero
-        eyebrow="CHAPTER 03"
+        eyebrow="WEDDING WEEKEND"
         title={
           <>
             The <em>Celebration</em>
           </>
         }
-        lede="Two ceremonies, one beautiful love story — replace with your own event names."
-        dark
+        lede="Two ceremonies, one beautiful love story — the details for each, in one place."
       />
 
       <div className="chapter-body countdown-block chapter-spaced">
@@ -190,7 +182,6 @@ export default function DetailsPage() {
 
       <PagBar
         prev={{ href: "/gallery", label: "OUR GALLERY" }}
-        page="03"
         next={{ href: "/rsvp", label: "RSVP" }}
       />
     </section>

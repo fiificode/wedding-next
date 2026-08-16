@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import ChapterHero from "@/components/ChapterHero";
 import PagBar from "@/components/PagBar";
 import Reveal from "@/components/Reveal";
-import ChapterSubNav from "@/components/ChapterSubNav";
 import TransitionLink from "@/components/TransitionLink";
 import PhotoUpload from "@/components/PhotoUpload";
 
@@ -58,21 +57,14 @@ export default function GuestGalleryPage() {
 
   return (
     <section className="chapter">
-      <ChapterSubNav
-        chapterLabel="CHAPTER 05"
-        title="Guest Gallery"
-        back={{ href: "/details", label: "THE DETAILS" }}
-        next={{ href: "/guestbook", label: "GUESTBOOK" }}
-      />
       <ChapterHero
-        eyebrow="CHAPTER 05"
+        eyebrow="SHARED WITH LOVE"
         title={
           <>
             Guest <em>Gallery</em>
           </>
         }
         lede="View photos from our guests"
-        dark
       />
       <div className="chapter-body chapter-spaced">
         {!unlocked ? (
@@ -173,7 +165,6 @@ export default function GuestGalleryPage() {
       </div>
       <PagBar
         prev={{ href: "/rsvp", label: "RSVP" }}
-        page="05"
         next={{ href: "/guestbook", label: "GUESTBOOK" }}
       />
     </section>
