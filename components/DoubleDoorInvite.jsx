@@ -107,6 +107,18 @@ export default function DoubleDoorInvite() {
               <circle cx="210" cy="34" r="1.3" fill="#4d7291" />
             </svg>
           </div>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=5.57413,-0.23494"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ib-qr"
+            onClick={(e) => e.stopPropagation()}
+            aria-label="Open venue location in Google Maps"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/qr-venue.svg" alt="" width={56} height={56} />
+            <span>SCAN FOR MAP</span>
+          </a>
           {!open && <div className="ib-tap">TAP TO OPEN</div>}
         </div>
 

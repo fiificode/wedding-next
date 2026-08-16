@@ -44,10 +44,7 @@ const EVENTS = [
       ],
       ["DRESS CODE", "[Formal / cocktail attire]", "[Colors to avoid, if any]"],
     ],
-    actions: [
-      { label: "WATCH ON YOUTUBE", href: "#", filled: true },
-      { label: "DOWNLOAD PROGRAMME", href: "#" },
-    ],
+    actions: [{ label: "DOWNLOAD PROGRAMME", href: "#", filled: true }],
     ph: "tph-5",
   },
 ];
