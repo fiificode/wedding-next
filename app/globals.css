@@ -451,6 +451,7 @@ button {
   letter-spacing: 0.2em;
   font-size: 0.78rem;
   margin-top: 14px;
+  color: var(--accent3);
 }
 .cover-line {
   font-family: var(--font-serif);
