@@ -66,11 +66,20 @@ export default function StoryPage() {
         meta="[MEETING DATE] · [PLACE YOU MET]"
         dark
       />
-      <div className="chapter-body" ref={bodyRef} style={{ position: "relative" }}>
+      <div
+        className="chapter-body"
+        ref={bodyRef}
+        style={{ position: "relative" }}
+      >
         <ScrollRail targetRef={bodyRef} />
         <div className="moments">
           {MOMENTS.map((m, i) => (
-            <Reveal as="div" delay={0} className={`moment ${i % 2 === 1 ? "reverse" : ""}`} key={m.title}>
+            <Reveal
+              as="div"
+              delay={0}
+              className={`moment ${i % 2 === 1 ? "reverse" : ""}`}
+              key={m.title}
+            >
               <div className="moment-media">
                 <div className={`media-ph ${m.ph}`}>Replace with photo</div>
                 <div className="moment-tag">
@@ -84,7 +93,9 @@ export default function StoryPage() {
                 <h4>{m.title}</h4>
                 <hr className="moment-rule" />
                 <p>{m.text}</p>
-                {m.callout && <span className="moment-callout">{m.callout}</span>}
+                {m.callout && (
+                  <span className="moment-callout">{m.callout}</span>
+                )}
               </div>
             </Reveal>
           ))}
@@ -93,7 +104,7 @@ export default function StoryPage() {
       <PagBar
         prev={{ href: "/contents", label: "CONTENTS" }}
         page="01"
-        next={{ href: "/details", label: "THE DETAILS" }}
+        next={{ href: "/gallery", label: "OUR GALLERY" }}
       />
     </section>
   );

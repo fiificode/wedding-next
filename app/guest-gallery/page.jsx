@@ -59,14 +59,18 @@ export default function GuestGalleryPage() {
   return (
     <section className="chapter">
       <ChapterSubNav
-        chapterLabel="GUEST GALLERY"
+        chapterLabel="CHAPTER 04"
         title="Share Your Moments"
-        back={{ href: "/gallery", label: "OUR GALLERY" }}
-        next={{ href: "/trivia", label: "TRIVIA" }}
+        back={{ href: "/details", label: "THE DETAILS" }}
+        next={{ href: "/guestbook", label: "GUESTBOOK" }}
       />
       <ChapterHero
-        eyebrow="GUEST GALLERY"
-        title="Share Your Moments"
+        eyebrow="CHAPTER 04"
+        title={
+          <>
+            Share Your <em>Moments</em>
+          </>
+        }
         lede="Help us capture every moment of this special day"
         dark
       />
@@ -74,9 +78,10 @@ export default function GuestGalleryPage() {
         {!unlocked ? (
           <div className="guest-gate">
             <Reveal as="p" delay={0.1} className="guest-gate-copy">
-              Take photos during the ceremonies and the cocktails afterwards, then upload them
-              here to our shared guest gallery. Your photos will join everyone else&apos;s to
-              create a beautiful, collective memory of the celebration.
+              Take photos during the ceremonies and the cocktails afterwards,
+              then upload them here to our shared guest gallery. Your photos
+              will join everyone else&apos;s to create a beautiful, collective
+              memory of the celebration.
             </Reveal>
 
             <Reveal as="ul" delay={0.16} className="guest-perks">
@@ -92,7 +97,12 @@ export default function GuestGalleryPage() {
               Enter the access code displayed at the venue to get started
             </Reveal>
 
-            <Reveal as="form" delay={0.28} className="guest-gate-form" onSubmit={handleSubmit}>
+            <Reveal
+              as="form"
+              delay={0.28}
+              className="guest-gate-form"
+              onSubmit={handleSubmit}
+            >
               <input
                 type="text"
                 placeholder="Your name (optional)"
@@ -126,7 +136,8 @@ export default function GuestGalleryPage() {
           <>
             <div className="guest-gate">
               <Reveal as="p" delay={0} className="guest-welcome">
-                Welcome{name.trim() ? `, ${name.trim()}` : ""} — thanks for being here.
+                Welcome{name.trim() ? `, ${name.trim()}` : ""} — thanks for
+                being here.
               </Reveal>
               <Reveal as="div" delay={0.08} className="share-cta">
                 <PhotoUpload guestName={name} onUploaded={handleUploaded} />
@@ -135,10 +146,13 @@ export default function GuestGalleryPage() {
 
             <Reveal as="div" delay={0.14} className="guest-shared">
               <p className="guest-shared-title">
-                From the gallery{sharedPhotos.length > 0 ? ` (${sharedPhotos.length})` : ""}
+                From the gallery
+                {sharedPhotos.length > 0 ? ` (${sharedPhotos.length})` : ""}
               </p>
               {!loadingShared && sharedPhotos.length === 0 && (
-                <p className="guest-shared-empty">No photos yet — be the first to share one.</p>
+                <p className="guest-shared-empty">
+                  No photos yet — be the first to share one.
+                </p>
               )}
               <div className="guest-shared-grid">
                 {sharedPhotos.map((p) => (
@@ -158,9 +172,9 @@ export default function GuestGalleryPage() {
         )}
       </div>
       <PagBar
-        prev={{ href: "/gallery", label: "OUR GALLERY" }}
-        page="GUEST"
-        next={{ href: "/trivia", label: "TRIVIA" }}
+        prev={{ href: "/details", label: "THE DETAILS" }}
+        page="04"
+        next={{ href: "/guestbook", label: "GUESTBOOK" }}
       />
     </section>
   );

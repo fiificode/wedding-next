@@ -21,7 +21,11 @@ const EVENTS = [
     img: traditionalWedding,
     fields: [
       ["DATE & TIME", "Friday, October 9", "10:00 AM"],
-      ["VENUE", "Presbyterian Church of Ghana", "Kaneshie Congregation, Kaneshie, Accra"],
+      [
+        "VENUE",
+        "Presbyterian Church of Ghana",
+        "Kaneshie Congregation, Kaneshie, Accra",
+      ],
       ["DRESS CODE", "[Traditional attire]", "[Notes on fabric / color]"],
     ],
     ph: "tph-3",
@@ -34,7 +38,11 @@ const EVENTS = [
     img: whiteWedding,
     fields: [
       ["DATE & TIME", "Saturday, October 10", "1:00 PM"],
-      ["VENUE", "Presbyterian Church of Ghana", "Kaneshie Congregation, Kaneshie, Accra"],
+      [
+        "VENUE",
+        "Presbyterian Church of Ghana",
+        "Kaneshie Congregation, Kaneshie, Accra",
+      ],
       ["DRESS CODE", "[Formal / cocktail attire]", "[Colors to avoid, if any]"],
     ],
     actions: [
@@ -51,13 +59,13 @@ export default function DetailsPage() {
   return (
     <section className="chapter">
       <ChapterSubNav
-        chapterLabel="CHAPTER 02"
+        chapterLabel="CHAPTER 03"
         title="Details"
-        back={{ href: "/story", label: "OUR STORY" }}
-        next={{ href: "/registry", label: "REGISTRY" }}
+        back={{ href: "/gallery", label: "OUR GALLERY" }}
+        next={{ href: "/guest-gallery", label: "GUEST GALLERY" }}
       />
       <ChapterHero
-        eyebrow="CHAPTER 02"
+        eyebrow="CHAPTER 03"
         title={
           <>
             The <em>Celebration</em>
@@ -69,7 +77,13 @@ export default function DetailsPage() {
 
       <div className="chapter-body countdown-block">
         <div className="eyebrow">COUNTING DOWN</div>
-        <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "2rem", marginTop: 6 }}>
+        <h3
+          style={{
+            fontFamily: "var(--font-serif)",
+            fontSize: "2rem",
+            marginTop: 6,
+          }}
+        >
           Until We Say <em style={{ fontStyle: "italic" }}>I Do</em>
         </h3>
         <div className="countdown-pairs">
@@ -88,14 +102,29 @@ export default function DetailsPage() {
         </div>
       </div>
 
-      <div className="chapter-body" ref={bodyRef} style={{ position: "relative", marginTop: 60 }}>
+      <div
+        className="chapter-body"
+        ref={bodyRef}
+        style={{ position: "relative", marginTop: 60 }}
+      >
         <ScrollRail targetRef={bodyRef} />
         <div className="detail-block-list">
           {EVENTS.map((ev, i) => (
-            <Reveal as="div" delay={0} className={`detail-block ${i % 2 === 1 ? "reverse" : ""}`} key={ev.title}>
+            <Reveal
+              as="div"
+              delay={0}
+              className={`detail-block ${i % 2 === 1 ? "reverse" : ""}`}
+              key={ev.title}
+            >
               <div className="moment-media">
                 <div className="moment-frame">
-                  <Image src={ev.img} alt={ev.title} fill sizes="(max-width: 700px) 100vw, 50vw" priority={i === 0} />
+                  <Image
+                    src={ev.img}
+                    alt={ev.title}
+                    fill
+                    sizes="(max-width: 700px) 100vw, 50vw"
+                    priority={i === 0}
+                  />
                 </div>
                 <div className="moment-tag">
                   <span className="tag-rule" />
@@ -106,11 +135,29 @@ export default function DetailsPage() {
                 <div className="eyebrow" style={{ color: "var(--accent1)" }}>
                   {ev.eyebrow}
                 </div>
-                <h4 style={{ fontFamily: "var(--font-serif)", fontSize: "1.8rem", marginTop: 6 }}>
+                <h4
+                  style={{
+                    fontFamily: "var(--font-serif)",
+                    fontSize: "1.8rem",
+                    marginTop: 6,
+                  }}
+                >
                   {ev.title}
                 </h4>
-                <p style={{ color: "var(--muted)", marginTop: 10, lineHeight: 1.7 }}>{ev.text}</p>
-                {ev.inviteOnly && <span className="invite-only">Strictly by invitation only</span>}
+                <p
+                  style={{
+                    color: "var(--muted)",
+                    marginTop: 10,
+                    lineHeight: 1.7,
+                  }}
+                >
+                  {ev.text}
+                </p>
+                {ev.inviteOnly && (
+                  <span className="invite-only">
+                    Strictly by invitation only
+                  </span>
+                )}
                 <dl>
                   {ev.fields.map(([label, main, sub]) => (
                     <div key={label}>
@@ -125,7 +172,11 @@ export default function DetailsPage() {
                 {ev.actions && (
                   <div className="detail-actions">
                     {ev.actions.map((a) => (
-                      <a key={a.label} href={a.href} className={a.filled ? "filled" : ""}>
+                      <a
+                        key={a.label}
+                        href={a.href}
+                        className={a.filled ? "filled" : ""}
+                      >
                         {a.label}
                       </a>
                     ))}
@@ -138,9 +189,9 @@ export default function DetailsPage() {
       </div>
 
       <PagBar
-        prev={{ href: "/story", label: "OUR STORY" }}
+        prev={{ href: "/gallery", label: "OUR GALLERY" }}
         page="02"
-        next={{ href: "/registry", label: "THE REGISTRY" }}
+        next={{ href: "/guest-gallery", label: "GUEST GALLERY" }}
       />
     </section>
   );

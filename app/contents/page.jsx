@@ -17,7 +17,7 @@ const CHAPTERS = [
   },
   { num: "04", href: "/rsvp", title: "RSVP", desc: "Confirm your attendance" },
   {
-    num: "05",
+    num: "04",
     href: "/guest-gallery",
     title: "Guest Gallery",
     desc: "View photos from our guests",

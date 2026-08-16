@@ -9,7 +9,11 @@ import GuestbookForm from "@/components/GuestbookForm";
 
 function formatDate(iso) {
   try {
-    return new Date(iso).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
+    return new Date(iso).toLocaleDateString(undefined, {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    });
   } catch {
     return "";
   }
@@ -42,13 +46,13 @@ export default function GuestbookPage() {
   return (
     <section className="chapter">
       <ChapterSubNav
-        chapterLabel="CHAPTER 07"
+        chapterLabel="CHAPTER 05"
         title="Guestbook"
-        back={{ href: "/trivia", label: "TRIVIA" }}
+        back={{ href: "/guest-gallery", label: "GUEST GALLERY" }}
         next={{ href: "/", label: "COVER" }}
       />
       <ChapterHero
-        eyebrow="CHAPTER 07"
+        eyebrow="CHAPTER 05"
         title={
           <>
             Sign Our <em>Guestbook</em>
@@ -63,12 +67,19 @@ export default function GuestbookPage() {
         </Reveal>
 
         {!loading && entries.length === 0 && (
-          <p className="guestbook-empty">No messages yet — be the first to sign the book.</p>
+          <p className="guestbook-empty">
+            No messages yet — be the first to sign the book.
+          </p>
         )}
 
         <div className="guestbook-grid">
           {entries.map((entry, i) => (
-            <Reveal as="div" delay={(i % 6) * 0.05} className="guestbook-card" key={entry.id}>
+            <Reveal
+              as="div"
+              delay={(i % 6) * 0.05}
+              className="guestbook-card"
+              key={entry.id}
+            >
               <span className="quote-mark">&ldquo;</span>
               <p className="gb-message">{entry.message}</p>
               <div className="gb-name">{entry.name}</div>
@@ -78,9 +89,9 @@ export default function GuestbookPage() {
         </div>
       </div>
       <PagBar
-        prev={{ href: "/trivia", label: "TRIVIA" }}
-        page="07"
-        next={{ href: "/", label: "BACK TO COVER" }}
+        prev={{ href: "/guest-gallery", label: "GUEST GALLERY" }}
+        page="05"
+        next={{ href: "/vendors", label: "FOR OUR VENDORS" }}
       />
     </section>
   );
