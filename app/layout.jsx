@@ -19,9 +19,9 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "[Your Names] — The Wedding Issue",
+  title: "Akoi & Afua — The Wedding Issue",
   description:
-    "A digital-magazine style wedding website template built in Next.js. Replace the bracketed placeholders with your own details.",
+    "A digital-magazine style wedding website for Akoi and Afua's wedding, built in Next.js.",
 };
 
 export default function RootLayout({ children }) {
