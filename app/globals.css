@@ -1278,6 +1278,15 @@ button {
   display: block;
 }
 
+/* chapter content breathing room after the hero on mobile */
+.chapter-spaced {
+  padding-top: 0;
+}
+@media (max-width: 700px) {
+  .chapter-spaced {
+    padding-top: 56px;
+  }
+}
 /* guest gallery gate */
 .guest-gate {
   max-width: 480px;

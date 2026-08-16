@@ -75,7 +75,7 @@ export default function DetailsPage() {
         dark
       />
 
-      <div className="chapter-body countdown-block">
+      <div className="chapter-body countdown-block chapter-spaced">
         <div className="eyebrow">COUNTING DOWN</div>
         <h3
           style={{

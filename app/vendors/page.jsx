@@ -16,8 +16,16 @@ const SCHEDULE_DAYS = [
     label: "Traditional Ceremony",
     rows: [
       ["8:00 AM", "Vendor load-in", "[Loading dock / entrance instructions]"],
-      ["10:00 AM", "Ceremony begins", "Presbyterian Church of Ghana, Kaneshie Congregation"],
-      ["1:00 PM", "Ceremony ends / breakdown", "[Curfew or venue turnover notes]"],
+      [
+        "10:00 AM",
+        "Ceremony begins",
+        "Presbyterian Church of Ghana, Kaneshie Congregation",
+      ],
+      [
+        "1:00 PM",
+        "Ceremony ends / breakdown",
+        "[Curfew or venue turnover notes]",
+      ],
     ],
   },
   {
@@ -25,7 +33,11 @@ const SCHEDULE_DAYS = [
     label: "White Wedding & Reception",
     rows: [
       ["10:00 AM", "Vendor load-in", "[Loading dock / entrance instructions]"],
-      ["1:00 PM", "Ceremony begins", "Presbyterian Church of Ghana, Kaneshie Congregation"],
+      [
+        "1:00 PM",
+        "Ceremony begins",
+        "Presbyterian Church of Ghana, Kaneshie Congregation",
+      ],
       ["4:00 PM", "Reception begins", "[Reception venue name & address]"],
       ["11:00 PM", "Breakdown & load-out", "[Curfew / noise restriction note]"],
     ],
@@ -60,23 +72,23 @@ export default function VendorsPage() {
   return (
     <section className="chapter">
       <ChapterSubNav
-        chapterLabel="VENDOR INFO"
+        chapterLabel="CHAPTER 06"
         title="For Our Vendors"
-        back={{ href: "/contents", label: "CONTENTS" }}
-        next={{ href: "/", label: "COVER" }}
+        back={{ href: "/guestbook", label: "GUESTBOOK" }}
+        next={{ href: "/contents", label: "CONTENTS" }}
       />
       <ChapterHero
-        eyebrow="FOR OUR VENDORS"
+        eyebrow="CHAPTER 06"
         title={
           <>
-            Vendor <em>Information</em>
+            For Our <em>Vendors</em>
           </>
         }
         lede="Everything your team needs for load-in, timing, and logistics on the day."
         dark
       />
 
-      <div className="chapter-body">
+      <div className="chapter-body chapter-spaced">
         <Reveal as="div" delay={0.1} className="vendor-contact">
           <div className="eyebrow">DAY-OF CONTACT</div>
           <h4>{CONTACT.name}</h4>
@@ -92,7 +104,12 @@ export default function VendorsPage() {
             Day-of Schedule
           </Reveal>
           {SCHEDULE_DAYS.map((day, di) => (
-            <Reveal as="div" delay={0.18 + di * 0.06} className="vendor-day" key={day.date}>
+            <Reveal
+              as="div"
+              delay={0.18 + di * 0.06}
+              className="vendor-day"
+              key={day.date}
+            >
               <div className="vendor-day-head">
                 <div className="vendor-day-date">{day.date}</div>
                 <div className="vendor-day-label">{day.label}</div>
@@ -112,12 +129,22 @@ export default function VendorsPage() {
           ))}
         </div>
 
-        <Reveal as="p" delay={0.1} className="vendor-section-title" style={{ marginTop: 90 }}>
+        <Reveal
+          as="p"
+          delay={0.1}
+          className="vendor-section-title"
+          style={{ marginTop: 90 }}
+        >
           Venues
         </Reveal>
         <div className="vendor-venues">
           {VENUES.map((v, i) => (
-            <Reveal as="div" delay={i * 0.08} className="vendor-venue-card" key={v.name}>
+            <Reveal
+              as="div"
+              delay={i * 0.08}
+              className="vendor-venue-card"
+              key={v.name}
+            >
               <h5>{v.name}</h5>
               <div className="vv-sub">{v.sub}</div>
               <ul>
@@ -129,10 +156,18 @@ export default function VendorsPage() {
           ))}
         </div>
 
-        <Reveal as="p" delay={0.1} className="vendor-section-title" style={{ marginTop: 90 }}>
+        <Reveal
+          as="p"
+          delay={0.1}
+          className="vendor-section-title"
+          style={{ marginTop: 90 }}
+        >
           Good to Know
         </Reveal>
-        <ul className="guest-perks" style={{ maxWidth: 600, margin: "24px auto 0" }}>
+        <ul
+          className="guest-perks"
+          style={{ maxWidth: 600, margin: "24px auto 0" }}
+        >
           {GOOD_TO_KNOW.map((item) => (
             <li key={item}>
               <span className="perk-spark">✦</span>
@@ -150,7 +185,11 @@ export default function VendorsPage() {
         </div>
       </div>
 
-      <PagBar prev={{ href: "/contents", label: "CONTENTS" }} page="VENDOR" next={{ href: "/", label: "BACK TO COVER" }} />
+      <PagBar
+        prev={{ href: "/guestbook", label: "GUESTBOOK" }}
+        page="06"
+        next={{ href: "/", label: "BACK TO COVER" }}
+      />
     </section>
   );
 }

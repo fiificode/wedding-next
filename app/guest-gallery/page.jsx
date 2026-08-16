@@ -74,7 +74,7 @@ export default function GuestGalleryPage() {
         lede="Help us capture every moment of this special day"
         dark
       />
-      <div className="chapter-body">
+      <div className="chapter-body chapter-spaced">
         {!unlocked ? (
           <div className="guest-gate">
             <Reveal as="p" delay={0.1} className="guest-gate-copy">
