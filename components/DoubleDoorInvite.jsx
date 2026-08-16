@@ -27,10 +27,16 @@ export default function DoubleDoorInvite() {
         <div className="invite-back-card">
           <div className="ib-logo">A &amp; B</div>
           <p className="ib-formal">
-            [The families] warmly request the pleasure of your company at the wedding ceremony of
-            their children
+            IN THE PRESENCE OF GOD AND OUR LOVED ONES, WE,
           </p>
-          <div className="ib-names">[Partner One] &amp; [Partner Two]</div>
+          <div className="ib-names">
+            Nana Kofi Akoi Barimah Opoku &amp; Maame Afua Tweneboah Antwi
+          </div>
+          <p className="ib-formal">
+            JOYFULLY INVITE YOU TO WITNESS THE BEGINNING OF OUR NEW LIFE
+            TOGETHER AS HUSBAND AND WIFE. JOIN US AS WE EXCHANGE OUR VOWS AND
+            BLESS OUR MARRIAGE
+          </p>
           <div className="ib-venue">
             <b>Presbyterian Church of Ghana · 1:00 PM</b>
             Kaneshie Congregation, Kaneshie, Accra
