@@ -73,6 +73,7 @@ export default function VendorsPage() {
           </>
         }
         lede="Everything your team needs for load-in, timing, and logistics on the day."
+        dark
       />
 
       <div className="chapter-body">

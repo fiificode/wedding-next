@@ -68,6 +68,7 @@ export default function GuestGalleryPage() {
         eyebrow="GUEST GALLERY"
         title="Share Your Moments"
         lede="Help us capture every moment of this special day"
+        dark
       />
       <div className="chapter-body">
         {!unlocked ? (

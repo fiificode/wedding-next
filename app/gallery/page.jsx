@@ -30,6 +30,7 @@ export default function GalleryPage() {
           </>
         }
         lede="Moments captured in time — replace these placeholder tiles with your own photos."
+        dark
       />
       <div className="chapter-body">
         <div className="gallery-grid">

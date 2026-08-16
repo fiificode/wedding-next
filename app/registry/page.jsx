@@ -26,6 +26,7 @@ export default function RegistryPage() {
           </>
         }
         lede="Your presence is the gift — but if you'd like to give more."
+        dark
       />
       <div className="chapter-body">
         <div className="registry-grid">

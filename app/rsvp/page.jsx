@@ -6,7 +6,7 @@ import RsvpForm from "@/components/RsvpForm";
 
 export default function RsvpPage() {
   return (
-    <section className="chapter on-dark">
+    <section className="chapter">
       <ChapterSubNav
         chapterLabel="CHAPTER 04"
         title="RSVP"

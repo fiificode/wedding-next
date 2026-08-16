@@ -48,7 +48,7 @@ export default function StoryPage() {
   const bodyRef = useRef(null);
 
   return (
-    <section className="chapter on-dark">
+    <section className="chapter">
       <ChapterSubNav
         chapterLabel="CHAPTER 01"
         title="Our Story"

@@ -64,6 +64,7 @@ export default function DetailsPage() {
           </>
         }
         lede="Two ceremonies, one beautiful love story — replace with your own event names."
+        dark
       />
 
       <div className="chapter-body countdown-block">

@@ -55,6 +55,7 @@ export default function GuestbookPage() {
           </>
         }
         lede="Words of love, laughter, and well wishes from those who matter most."
+        dark
       />
       <div className="chapter-body">
         <Reveal as="div" delay={0.1} className="guestbook-cta-wrap">

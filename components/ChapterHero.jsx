@@ -2,7 +2,7 @@ import Reveal from "@/components/Reveal";
 
 export default function ChapterHero({ eyebrow, title, lede, meta, dark }) {
   return (
-    <div className="chapter-hero">
+    <div className={`chapter-hero ${dark ? "hero-dark" : ""}`}>
       <div className={`dotgrid ${dark ? "on-dark" : ""}`} />
       {dark && <div className="glow" />}
       <div style={{ position: "relative" }}>

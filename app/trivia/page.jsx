@@ -20,6 +20,7 @@ export default function TriviaPage() {
           </>
         }
         lede="Test your knowledge about our love story. Top scorers will be entered into a special prize draw."
+        dark
       />
       <div className="chapter-body">
         <Quiz />
