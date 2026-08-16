@@ -91,6 +91,46 @@ export default function DetailsPage() {
         </div>
       </div>
 
+      <div className="chapter-body colors-block">
+        <div className="eyebrow">DRESS THE PART</div>
+        <h3
+          style={{
+            fontFamily: "var(--font-serif)",
+            fontSize: "2rem",
+            marginTop: 6,
+          }}
+        >
+          Our Wedding <em style={{ fontStyle: "italic" }}>Colors</em>
+        </h3>
+        <p
+          style={{
+            color: "var(--muted)",
+            maxWidth: 480,
+            margin: "14px auto 0",
+            lineHeight: 1.7,
+          }}
+        >
+          If you&apos;d like to coordinate with our palette, here&apos;s
+          what we&apos;ll be wearing on the day.
+        </p>
+        <div className="color-swatches">
+          <div className="color-swatch">
+            <span
+              className="color-circle"
+              style={{ background: "var(--accent1)" }}
+            />
+            <span className="color-swatch-label">Royal Blue</span>
+          </div>
+          <div className="color-swatch">
+            <span
+              className="color-circle"
+              style={{ background: "var(--accent3)" }}
+            />
+            <span className="color-swatch-label">Gold</span>
+          </div>
+        </div>
+      </div>
+
       <div
         className="chapter-body"
         ref={bodyRef}
