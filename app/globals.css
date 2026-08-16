@@ -1237,13 +1237,13 @@ button {
   position: relative;
   width: min(90vw, 460px);
   aspect-ratio: 3 / 4;
-  border-radius: 6px;
+  border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 30px 60px rgba(35, 30, 20, 0.2), 0 0 0 1px rgba(183, 146, 76, 0.16);
 }
 .invite-back-card {
-  position: absolute;
+  position: relative;
   inset: 0;
   background: var(--offwhite);
   color: var(--ink);
@@ -1256,11 +1256,23 @@ button {
   background-image: radial-gradient(circle at 12% 10%, rgba(77, 114, 145, 0.16), transparent 40%),
     radial-gradient(circle at 88% 92%, rgba(183, 146, 76, 0.12), transparent 40%);
 }
+.invite-back-card::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  transform: translateX(-50%);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Cline x1='15' y1='0' x2='15' y2='9' stroke='%23b7924c' stroke-width='1' opacity='0.75'/%3E%3Crect x='11.5' y='11.5' width='7' height='7' fill='none' stroke='%23b7924c' stroke-width='1' opacity='0.75' transform='rotate(45 15 15)'/%3E%3Cline x1='15' y1='21' x2='15' y2='30' stroke='%23b7924c' stroke-width='1' opacity='0.75'/%3E%3C/svg%3E")
+    no-repeat center / contain;
+}
 .invite-back-card .ib-logo {
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 1.8rem;
   color: var(--accent1);
+  margin-top: 20px;
 }
 .invite-back-card .ib-formal {
   font-size: 0.85rem;
@@ -1288,9 +1300,22 @@ button {
 .invite-back-card .ib-tap {
   position: absolute;
   bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 0.65rem;
   letter-spacing: 0.2em;
   color: var(--muted);
+  white-space: nowrap;
+}
+.invite-back-card .ib-tap::before,
+.invite-back-card .ib-tap::after {
+  content: "";
+  width: 16px;
+  height: 1px;
+  background: rgba(183, 146, 76, 0.5);
 }
 .invite-door {
   position: absolute;
@@ -1301,19 +1326,37 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(160deg, #1c2028, #0a0c10);
+  background-color: var(--dark);
+  background-image:
+    radial-gradient(circle at 50% 45%, rgba(183, 146, 76, 0.12), transparent 62%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='200'%3E%3Cpath d='M50 0C30 20 70 40 50 60 30 80 70 100 50 120 30 140 70 160 50 180 30 195 60 198 50 200' stroke='%23b7924c' stroke-width='1' fill='none' opacity='0.22'/%3E%3Cellipse cx='34' cy='28' rx='7' ry='3.2' fill='%23b7924c' opacity='0.18' transform='rotate(-35 34 28)'/%3E%3Cellipse cx='66' cy='68' rx='7' ry='3.2' fill='%23b7924c' opacity='0.18' transform='rotate(35 66 68)'/%3E%3Cellipse cx='34' cy='108' rx='7' ry='3.2' fill='%23b7924c' opacity='0.18' transform='rotate(-35 34 108)'/%3E%3Cellipse cx='66' cy='148' rx='7' ry='3.2' fill='%23b7924c' opacity='0.18' transform='rotate(35 66 148)'/%3E%3Cellipse cx='34' cy='185' rx='7' ry='3.2' fill='%23b7924c' opacity='0.18' transform='rotate(-35 34 185)'/%3E%3C/svg%3E");
+  background-repeat: no-repeat, repeat;
+  background-size: cover, 110px 220px;
   color: var(--offwhite);
 }
 .invite-door-left {
   left: 0;
-  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  border-right: 1px solid rgba(183, 146, 76, 0.28);
 }
 .invite-door-right {
   right: 0;
-  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: 1px solid rgba(183, 146, 76, 0.28);
 }
 .door-inner {
+  position: relative;
   text-align: center;
+  padding-top: 34px;
+}
+.door-inner::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  width: 26px;
+  height: 26px;
+  transform: translateX(-50%);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26'%3E%3Cline x1='13' y1='0' x2='13' y2='7' stroke='%23b7924c' stroke-width='1' opacity='0.7'/%3E%3Crect x='10' y='10' width='6' height='6' fill='none' stroke='%23b7924c' stroke-width='1' opacity='0.7' transform='rotate(45 13 13)'/%3E%3Cline x1='13' y1='19' x2='13' y2='26' stroke='%23b7924c' stroke-width='1' opacity='0.7'/%3E%3C/svg%3E")
+    no-repeat center / contain;
 }
 .door-inner .we-do {
   font-family: var(--font-serif);
@@ -1325,6 +1368,7 @@ button {
   font-family: var(--font-serif);
   font-size: 1.05rem;
   margin-top: 10px;
+  opacity: 0.88;
 }
 .rsvp-hint {
   text-align: center;
