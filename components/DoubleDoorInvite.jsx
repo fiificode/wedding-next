@@ -44,7 +44,9 @@ export default function DoubleDoorInvite() {
             IN THE PRESENCE OF GOD AND OUR LOVED ONES, WE,
           </p>
           <div className="ib-names">
-            Nana Kofi Akoi Barimah Opoku &amp; Maame Afua Tweneboah Antwi
+            <span className="ib-names-line">Nana Kofi Akoi Barimah Opoku</span>
+            <span className="ib-names-amp">&amp;</span>
+            <span className="ib-names-line">Maame Afua Tweneboah Antwi</span>
           </div>
           <p className="ib-formal">
             JOYFULLY INVITE YOU TO WITNESS THE BEGINNING OF OUR NEW LIFE
