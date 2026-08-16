@@ -1259,12 +1259,13 @@ button {
 }
 .rose-corner {
   position: absolute;
-  width: 155px;
-  height: 155px;
+  width: clamp(85px, 28vw, 140px);
+  height: clamp(85px, 28vw, 140px);
   pointer-events: none;
   mix-blend-mode: multiply;
-  z-index: 2;
+  z-index: 1;
   object-fit: contain;
+  opacity: 0.9;
 }
 .rose-top-right {
   top: -5px;
@@ -1285,6 +1286,7 @@ button {
   transform: translateX(-50%);
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Cline x1='15' y1='0' x2='15' y2='9' stroke='%23b7924c' stroke-width='1' opacity='0.75'/%3E%3Crect x='11.5' y='11.5' width='7' height='7' fill='none' stroke='%23b7924c' stroke-width='1' opacity='0.75' transform='rotate(45 15 15)'/%3E%3Cline x1='15' y1='21' x2='15' y2='30' stroke='%23b7924c' stroke-width='1' opacity='0.75'/%3E%3C/svg%3E")
     no-repeat center / contain;
+  z-index: 2;
 }
 .invite-back-card .ib-logo {
   font-family: var(--font-serif);
@@ -1292,12 +1294,16 @@ button {
   font-size: 1.8rem;
   color: var(--accent1);
   margin-top: 20px;
+  position: relative;
+  z-index: 2;
 }
 .invite-back-card .ib-formal {
   font-size: 0.85rem;
   line-height: 1.7;
   color: var(--muted);
   margin: 16px 0;
+  position: relative;
+  z-index: 2;
 }
 .invite-back-card .ib-names {
   font-family: var(--font-serif);
@@ -1305,9 +1311,13 @@ button {
   font-size: 1.7rem;
   color: var(--accent1);
   margin: 8px 0 18px;
+  position: relative;
+  z-index: 2;
 }
 .invite-back-card .ib-venue {
   font-size: 0.85rem;
+  position: relative;
+  z-index: 2;
 }
 .invite-back-card .ib-venue b {
   display: block;
@@ -1319,6 +1329,8 @@ button {
 .invite-back-card .ib-flowers {
   width: 130px;
   margin-top: 22px;
+  position: relative;
+  z-index: 2;
 }
 .invite-back-card .ib-flowers svg {
   width: 100%;
@@ -1337,6 +1349,33 @@ button {
   letter-spacing: 0.2em;
   color: var(--muted);
   white-space: nowrap;
+  z-index: 2;
+}
+@media (max-width: 600px) {
+  .rose-corner {
+    width: clamp(60px, 20vw, 90px);
+    height: clamp(60px, 20vw, 90px);
+    opacity: 0.8;
+  }
+  .rose-top-right {
+    top: -2px;
+    right: -2px;
+  }
+  .rose-bottom-left {
+    bottom: -2px;
+    left: -2px;
+  }
+  .invite-back-card {
+    padding: 30px 20px 45px;
+  }
+  .invite-back-card .ib-formal {
+    font-size: 0.78rem;
+    margin: 10px 0;
+  }
+  .invite-back-card .ib-names {
+    font-size: 1.4rem;
+    margin: 6px 0 12px;
+  }
 }
 .invite-back-card .ib-tap::before,
 .invite-back-card .ib-tap::after {
