@@ -1,19 +1,47 @@
+import Image from "next/image";
 import ChapterHero from "@/components/ChapterHero";
 import PagBar from "@/components/PagBar";
 import Reveal from "@/components/Reveal";
 import TransitionLink from "@/components/TransitionLink";
 
+import galleryWhereBegan from "@/assets/galleryWhereBegan.jpg";
+import friendsStory from "@/assets/friendsStory.jpg";
+import proposalStory from "@/assets/proposalStory.jpg";
+import galleryEngagement from "@/assets/galleryEngagement.jpg";
+import galleryFamily from "@/assets/galleryFamily.jpg";
+import traditionalWedding from "@/assets/traditionalWedding.jpg";
+
 const PHOTOS = [
-  { ph: "tph-1", caption: "Where it all began", sub: "From the very first hello" },
   {
-    ph: "tph-2",
+    img: galleryWhereBegan,
+    caption: "Where it all began",
+    sub: "From the very first hello",
+  },
+  {
+    img: friendsStory,
     caption: "From friends to forever",
     sub: "Chapter by chapter",
   },
-  { ph: "tph-3", caption: "The proposal", sub: "The question that changed everything" },
-  { ph: "tph-4", caption: "Engagement shoot", sub: "One day closer to forever" },
-  { ph: "tph-5", caption: "Family celebrations", sub: "Surrounded by love" },
-  { ph: "tph-6", caption: "Getting ready", sub: "The calm before the aisle" },
+  {
+    img: proposalStory,
+    caption: "The proposal",
+    sub: "The question that changed everything",
+  },
+  {
+    img: galleryEngagement,
+    caption: "Engagement shoot",
+    sub: "One day closer to forever",
+  },
+  {
+    img: galleryFamily,
+    caption: "Family celebrations",
+    sub: "Surrounded by love",
+  },
+  {
+    img: traditionalWedding,
+    caption: "Getting ready",
+    sub: "The calm before the aisle",
+  },
 ];
 
 export default function GalleryPage() {
@@ -37,10 +65,21 @@ export default function GalleryPage() {
               className="gallery-item"
               key={p.caption}
             >
-              <div className="gallery-tile">
-                <div className={`tile-ph ${p.ph}`}>
-                  Photo {String(i + 1).padStart(2, "0")}
-                </div>
+              <div className="gallery-tile" style={{ position: "relative" }}>
+                {p.img ? (
+                  <Image
+                    src={p.img}
+                    alt={p.caption}
+                    fill
+                    sizes="(max-width: 700px) 100vw, 33vw"
+                    priority={i < 3}
+                    style={{ objectFit: "cover" }}
+                  />
+                ) : (
+                  <div className={`tile-ph ${p.ph}`}>
+                    Photo {String(i + 1).padStart(2, "0")}
+                  </div>
+                )}
               </div>
               <div className="gallery-caption">
                 <span className="cap-rule" />

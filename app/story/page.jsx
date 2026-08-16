@@ -8,6 +8,8 @@ import Reveal from "@/components/Reveal";
 import ScrollRail from "@/components/ScrollRail";
 import couple from "@/assets/couple.jpg";
 import traditionalWedding from "@/assets/traditionalWedding.jpg";
+import friendsStory from "@/assets/friendsStory.jpg";
+import proposalStory from "@/assets/proposalStory.jpg";
 
 const MOMENTS = [
   {
@@ -25,7 +27,7 @@ const MOMENTS = [
     eyebrow: "THE GROWING BOND",
     title: "From Strangers to Friends",
     text: "What started as small talk became long conversations, shared laughter, and a friendship neither of us could imagine being without. Somewhere along the way, 'just friends' quietly turned into something more.",
-    ph: "tph-2",
+    img: friendsStory,
   },
   {
     year: "2022",
@@ -42,7 +44,7 @@ const MOMENTS = [
     title: "The Proposal",
     text: "With family in our hearts and a future in mind, Akoi asked the question that would change everything. Afua said yes — and October 10, 2026 became the date we've been counting down to ever since.",
     callout: "She said yes — and forever began.",
-    ph: "tph-4",
+    img: proposalStory,
   },
 ];
 
