@@ -62,7 +62,7 @@ export default function DetailsPage() {
         chapterLabel="CHAPTER 03"
         title="Details"
         back={{ href: "/gallery", label: "OUR GALLERY" }}
-        next={{ href: "/guest-gallery", label: "GUEST GALLERY" }}
+        next={{ href: "/rsvp", label: "RSVP" }}
       />
       <ChapterHero
         eyebrow="CHAPTER 03"
@@ -190,8 +190,8 @@ export default function DetailsPage() {
 
       <PagBar
         prev={{ href: "/gallery", label: "OUR GALLERY" }}
-        page="02"
-        next={{ href: "/guest-gallery", label: "GUEST GALLERY" }}
+        page="03"
+        next={{ href: "/rsvp", label: "RSVP" }}
       />
     </section>
   );

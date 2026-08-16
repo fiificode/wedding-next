@@ -323,6 +323,9 @@ button {
   color: inherit;
   pointer-events: auto;
 }
+.hamburger.light {
+  color: var(--offwhite);
+}
 .hamburger span {
   display: block;
   height: 2px;

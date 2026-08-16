@@ -72,7 +72,7 @@ export default function VendorsPage() {
   return (
     <section className="chapter">
       <ChapterSubNav
-        chapterLabel="CHAPTER 06"
+        chapterLabel="CHAPTER 07"
         title="For Our Vendors"
         back={{ href: "/guestbook", label: "GUESTBOOK" }}
         next={{ href: "/contents", label: "CONTENTS" }}
@@ -187,7 +187,7 @@ export default function VendorsPage() {
 
       <PagBar
         prev={{ href: "/guestbook", label: "GUESTBOOK" }}
-        page="06"
+        page="07"
         next={{ href: "/", label: "BACK TO COVER" }}
       />
     </section>

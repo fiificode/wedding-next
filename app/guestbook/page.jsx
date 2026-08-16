@@ -46,13 +46,13 @@ export default function GuestbookPage() {
   return (
     <section className="chapter">
       <ChapterSubNav
-        chapterLabel="CHAPTER 05"
+        chapterLabel="CHAPTER 06"
         title="Guestbook"
         back={{ href: "/guest-gallery", label: "GUEST GALLERY" }}
-        next={{ href: "/", label: "COVER" }}
+        next={{ href: "/vendors", label: "VENDORS" }}
       />
       <ChapterHero
-        eyebrow="CHAPTER 05"
+        eyebrow="CHAPTER 06"
         title={
           <>
             Sign Our <em>Guestbook</em>
@@ -90,7 +90,7 @@ export default function GuestbookPage() {
       </div>
       <PagBar
         prev={{ href: "/guest-gallery", label: "GUEST GALLERY" }}
-        page="05"
+        page="06"
         next={{ href: "/vendors", label: "FOR OUR VENDORS" }}
       />
     </section>

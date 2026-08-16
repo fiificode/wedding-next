@@ -59,19 +59,19 @@ export default function GuestGalleryPage() {
   return (
     <section className="chapter">
       <ChapterSubNav
-        chapterLabel="CHAPTER 04"
-        title="Share Your Moments"
+        chapterLabel="CHAPTER 05"
+        title="Guest Gallery"
         back={{ href: "/details", label: "THE DETAILS" }}
         next={{ href: "/guestbook", label: "GUESTBOOK" }}
       />
       <ChapterHero
-        eyebrow="CHAPTER 04"
+        eyebrow="CHAPTER 05"
         title={
           <>
-            Share Your <em>Moments</em>
+            Guest <em>Gallery</em>
           </>
         }
-        lede="Help us capture every moment of this special day"
+        lede="View photos from our guests"
         dark
       />
       <div className="chapter-body chapter-spaced">
@@ -172,8 +172,8 @@ export default function GuestGalleryPage() {
         )}
       </div>
       <PagBar
-        prev={{ href: "/details", label: "THE DETAILS" }}
-        page="04"
+        prev={{ href: "/rsvp", label: "RSVP" }}
+        page="05"
         next={{ href: "/guestbook", label: "GUESTBOOK" }}
       />
     </section>

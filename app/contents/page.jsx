@@ -17,19 +17,19 @@ const CHAPTERS = [
   },
   { num: "04", href: "/rsvp", title: "RSVP", desc: "Confirm your attendance" },
   {
-    num: "04",
+    num: "05",
     href: "/guest-gallery",
     title: "Guest Gallery",
     desc: "View photos from our guests",
   },
   {
-    num: "05",
+    num: "06",
     href: "/guestbook",
     title: "Guestbook",
     desc: "Leave a message for the couple",
   },
   {
-    num: "06",
+    num: "07",
     href: "/vendors",
     title: "For Our Vendors",
     desc: "Vendor information and guidelines",

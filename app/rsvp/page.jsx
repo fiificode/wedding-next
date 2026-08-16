@@ -10,8 +10,8 @@ export default function RsvpPage() {
       <ChapterSubNav
         chapterLabel="CHAPTER 04"
         title="RSVP"
-        back={{ href: "/registry", label: "REGISTRY" }}
-        next={{ href: "/gallery", label: "OUR GALLERY" }}
+        back={{ href: "/details", label: "THE DETAILS" }}
+        next={{ href: "/guest-gallery", label: "GUEST GALLERY" }}
       />
       <ChapterHero
         eyebrow="CHAPTER 04 — THE INVITATION"
@@ -20,11 +20,13 @@ export default function RsvpPage() {
         dark
       />
       <DoubleDoorInvite />
-      <RsvpForm />
+      <div className="chapter-body">
+        <RsvpForm />
+      </div>
       <PagBar
-        prev={{ href: "/registry", label: "REGISTRY" }}
+        prev={{ href: "/details", label: "THE DETAILS" }}
         page="04"
-        next={{ href: "/gallery", label: "OUR GALLERY" }}
+        next={{ href: "/guest-gallery", label: "GUEST GALLERY" }}
       />
     </section>
   );

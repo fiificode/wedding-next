@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import TransitionLink from "@/components/TransitionLink";
 
 const LINKS = [
@@ -19,12 +20,30 @@ const LINKS = [
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 380);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // White hamburger over the dark cover + dark hero sections; dark once
+  // scrolled into light content (except pages that are dark throughout).
+  const light =
+    pathname === "/" ||
+    pathname === "/rsvp" ||
+    (pathname !== "/contents" && !scrolled);
 
   return (
     <>
       <nav className="topnav">
         <button
-          className="hamburger"
+          className={`hamburger ${light ? "light" : ""}`}
           aria-label="Open menu"
           onClick={() => setOpen(true)}
         >
