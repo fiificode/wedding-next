@@ -11,7 +11,7 @@ import traditionalWedding from "@/assets/traditionalWedding.jpg";
 
 const MOMENTS = [
   {
-    year: "[YEAR]",
+    year: "2021",
     tag: "The Beginning",
     eyebrow: "IN AKOI'S WORDS",
     title: "How We Met",
@@ -20,7 +20,7 @@ const MOMENTS = [
     img: couple,
   },
   {
-    year: "[YEAR]",
+    year: "2021",
     tag: "The Same Day",
     eyebrow: "THE GROWING BOND",
     title: "From Strangers to Friends",
@@ -28,7 +28,7 @@ const MOMENTS = [
     ph: "tph-2",
   },
   {
-    year: "[YEAR]",
+    year: "2022",
     tag: "Falling",
     eyebrow: "IN AFUA'S WORDS",
     title: "The First Date",
@@ -36,7 +36,7 @@ const MOMENTS = [
     img: traditionalWedding,
   },
   {
-    year: "[YEAR]",
+    year: "2025",
     tag: "Forever",
     eyebrow: "THE QUESTION",
     title: "The Proposal",

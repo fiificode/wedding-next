@@ -1,14 +1,14 @@
 :root {
-  --cream: #f5f8fc;
-  --ink: #1c2a3a;
-  --offwhite: #fbfdff;
-  --dark: #0f1c2e;
-  --accent1: #35618f;
-  --accent2: #7fa8d9;
-  --accent3: #c9a227;
-  --gradient: linear-gradient(90deg, #35618f, #7fa8d9, #c9a227);
-  --border: #dbe3ee;
-  --muted: #6d7885;
+  --cream: #f7f6f2;
+  --ink: #23262b;
+  --offwhite: #ffffff;
+  --dark: #14181d;
+  --accent1: #4d7291;
+  --accent2: #a8bece;
+  --accent3: #b7924c;
+  --gradient: linear-gradient(90deg, var(--accent1), var(--accent3));
+  --border: #e6e2da;
+  --muted: #7a7972;
 }
 
 * {
@@ -57,8 +57,8 @@ button {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(60% 50% at 85% 10%, rgba(53, 97, 143, 0.22), transparent 70%),
-    radial-gradient(55% 45% at 15% 90%, rgba(201, 162, 39, 0.14), transparent 70%);
+  background: radial-gradient(60% 50% at 85% 10%, rgba(77, 114, 145, 0.14), transparent 70%),
+    radial-gradient(55% 45% at 15% 90%, rgba(183, 146, 76, 0.09), transparent 70%);
 }
 .gradient-text {
   color: var(--accent1);
@@ -116,7 +116,7 @@ button {
   font-family: var(--font-serif);
   font-size: 1.7rem;
   letter-spacing: 0.08em;
-  color: #9aa9ba;
+  color: #9c988e;
 }
 
 /* ---------- custom cursor ---------- */
@@ -225,7 +225,7 @@ button {
   gap: 20px;
   padding: 22px 6vw;
   color: var(--ink);
-  background: rgba(245, 248, 252, 0.82);
+  background: rgba(247, 246, 242, 0.82);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
@@ -344,12 +344,12 @@ button {
   overflow: hidden;
   background-color: var(--dark);
   background-image:
-    radial-gradient(circle at 50% 22%, rgba(201, 162, 39, 0.14), transparent 55%),
-    radial-gradient(circle at 50% 90%, rgba(127, 168, 217, 0.1), transparent 50%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='200'%3E%3Cpath d='M50 0C30 20 70 40 50 60 30 80 70 100 50 120 30 140 70 160 50 180 30 195 60 198 50 200' stroke='%23c9a227' stroke-width='1' fill='none' opacity='0.3'/%3E%3Cellipse cx='34' cy='28' rx='7' ry='3.2' fill='%23c9a227' opacity='0.26' transform='rotate(-35 34 28)'/%3E%3Cellipse cx='66' cy='68' rx='7' ry='3.2' fill='%23c9a227' opacity='0.26' transform='rotate(35 66 68)'/%3E%3Cellipse cx='34' cy='108' rx='7' ry='3.2' fill='%23c9a227' opacity='0.26' transform='rotate(-35 34 108)'/%3E%3Cellipse cx='66' cy='148' rx='7' ry='3.2' fill='%23c9a227' opacity='0.26' transform='rotate(35 66 148)'/%3E%3Cellipse cx='34' cy='185' rx='7' ry='3.2' fill='%23c9a227' opacity='0.26' transform='rotate(-35 34 185)'/%3E%3C/svg%3E");
+    radial-gradient(circle at 50% 22%, rgba(183, 146, 76, 0.12), transparent 55%),
+    radial-gradient(circle at 50% 90%, rgba(168, 190, 206, 0.1), transparent 50%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='200'%3E%3Cpath d='M50 0C30 20 70 40 50 60 30 80 70 100 50 120 30 140 70 160 50 180 30 195 60 198 50 200' stroke='%23b7924c' stroke-width='1' fill='none' opacity='0.3'/%3E%3Cellipse cx='34' cy='28' rx='7' ry='3.2' fill='%23b7924c' opacity='0.26' transform='rotate(-35 34 28)'/%3E%3Cellipse cx='66' cy='68' rx='7' ry='3.2' fill='%23b7924c' opacity='0.26' transform='rotate(35 66 68)'/%3E%3Cellipse cx='34' cy='108' rx='7' ry='3.2' fill='%23b7924c' opacity='0.26' transform='rotate(-35 34 108)'/%3E%3Cellipse cx='66' cy='148' rx='7' ry='3.2' fill='%23b7924c' opacity='0.26' transform='rotate(35 66 148)'/%3E%3Cellipse cx='34' cy='185' rx='7' ry='3.2' fill='%23b7924c' opacity='0.26' transform='rotate(-35 34 185)'/%3E%3C/svg%3E");
   background-repeat: no-repeat, no-repeat, repeat;
   background-size: cover, cover, 110px 220px;
-  border-right: 1px solid rgba(201, 162, 39, 0.16);
+  border-right: 1px solid rgba(183, 146, 76, 0.14);
 }
 .cover-sidebar::before {
   content: "";
@@ -359,7 +359,7 @@ button {
   width: 40px;
   height: 40px;
   transform: translateX(-50%);
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cline x1='20' y1='0' x2='20' y2='12' stroke='%23c9a227' stroke-width='1' opacity='0.7'/%3E%3Crect x='16' y='16' width='8' height='8' fill='none' stroke='%23c9a227' stroke-width='1' opacity='0.7' transform='rotate(45 20 20)'/%3E%3Cline x1='20' y1='28' x2='20' y2='40' stroke='%23c9a227' stroke-width='1' opacity='0.7'/%3E%3C/svg%3E")
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cline x1='20' y1='0' x2='20' y2='12' stroke='%23b7924c' stroke-width='1' opacity='0.7'/%3E%3Crect x='16' y='16' width='8' height='8' fill='none' stroke='%23b7924c' stroke-width='1' opacity='0.7' transform='rotate(45 20 20)'/%3E%3Cline x1='20' y1='28' x2='20' y2='40' stroke='%23b7924c' stroke-width='1' opacity='0.7'/%3E%3C/svg%3E")
     no-repeat center / contain;
   pointer-events: none;
 }
@@ -382,7 +382,7 @@ button {
   left: 50%;
   width: 1px;
   height: 22px;
-  background: linear-gradient(180deg, transparent, rgba(201, 162, 39, 0.6));
+  background: linear-gradient(180deg, transparent, rgba(183, 146, 76, 0.5));
   transform: translateX(-50%);
 }
 .cover-sidebar-text::before {
@@ -390,7 +390,7 @@ button {
 }
 .cover-sidebar-text::after {
   bottom: -34px;
-  background: linear-gradient(0deg, transparent, rgba(201, 162, 39, 0.6));
+  background: linear-gradient(0deg, transparent, rgba(183, 146, 76, 0.5));
 }
 @media (min-width: 900px) {
   .cover-sidebar {
@@ -415,7 +415,7 @@ button {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(180deg, rgba(15, 28, 46, 0.55), rgba(15, 28, 46, 0.78));
+  background: linear-gradient(180deg, rgba(20, 24, 29, 0.5), rgba(20, 24, 29, 0.76));
   pointer-events: none;
 }
 .cover-hero > *:not(.cover-bg):not(.cover-overlay):not(.cover-meta-top) {
@@ -489,22 +489,22 @@ button {
 
 /* ---------- shared photo-placeholder gradients ---------- */
 .tph-1 {
-  background: linear-gradient(160deg, #4a7cad, #2c5480);
+  background: linear-gradient(160deg, #5b7fa0, #3c5876);
 }
 .tph-2 {
-  background: linear-gradient(160deg, #b7cbe6, #8fabce);
+  background: linear-gradient(160deg, #c7d3e0, #a3b6c9);
 }
 .tph-3 {
-  background: linear-gradient(160deg, #e8cf8a, #c9a227);
+  background: linear-gradient(160deg, #ddc99a, #b7924c);
 }
 .tph-4 {
-  background: linear-gradient(160deg, #1c3050, #0a1420);
+  background: linear-gradient(160deg, #262b33, #14181d);
 }
 .tph-5 {
-  background: linear-gradient(160deg, #e3e9f0, #c3cedb);
+  background: linear-gradient(160deg, #eae7e0, #d4cfc4);
 }
 .tph-6 {
-  background: linear-gradient(160deg, #5f83ab, #3a5d85);
+  background: linear-gradient(160deg, #6f8fac, #46647f);
 }
 
 /* ---------- chapter shell ---------- */
@@ -589,10 +589,10 @@ button {
   aspect-ratio: 4 / 5;
   font-size: 0.7rem;
   letter-spacing: 0.1em;
-  color: #5a6b7a;
+  color: #837f75;
   text-transform: uppercase;
   border-radius: 6px;
-  background: linear-gradient(160deg, #e3e9f0, #c3cedb);
+  background: linear-gradient(160deg, #eae7e0, #d4cfc4);
 }
 .moment-frame {
   position: relative;
@@ -858,7 +858,7 @@ button {
   flex-direction: column;
   justify-content: flex-end;
   padding: 20px;
-  background: linear-gradient(160deg, #eef2f7, #dbe4ee);
+  background: linear-gradient(160deg, #f3f1ec, #e3dfd5);
 }
 .registry-card h5 {
   font-family: var(--font-serif);
@@ -900,23 +900,23 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .tile-ph.g1 {
-  background: linear-gradient(160deg, #4a7cad, #2c5480);
+  background: linear-gradient(160deg, #5b7fa0, #3c5876);
 }
 .tile-ph.g2 {
-  background: linear-gradient(160deg, #b7cbe6, #8fabce);
+  background: linear-gradient(160deg, #c7d3e0, #a3b6c9);
 }
 .tile-ph.g3 {
-  background: linear-gradient(160deg, #e8cf8a, #c9a227);
+  background: linear-gradient(160deg, #ddc99a, #b7924c);
 }
 .tile-ph.g4 {
-  background: linear-gradient(160deg, #1c3050, #0a1420);
+  background: linear-gradient(160deg, #262b33, #14181d);
 }
 .tile-ph.g5 {
-  background: linear-gradient(160deg, #e3e9f0, #c3cedb);
-  color: #1c2a3a;
+  background: linear-gradient(160deg, #eae7e0, #d4cfc4);
+  color: #23262b;
 }
 .tile-ph.g6 {
-  background: linear-gradient(160deg, #5f83ab, #3a5d85);
+  background: linear-gradient(160deg, #6f8fac, #46647f);
 }
 .gallery-caption {
   display: flex;
@@ -1253,8 +1253,8 @@ button {
   justify-content: center;
   text-align: center;
   padding: 40px 34px;
-  background-image: radial-gradient(circle at 12% 10%, rgba(53, 97, 143, 0.28), transparent 40%),
-    radial-gradient(circle at 88% 92%, rgba(201, 162, 39, 0.28), transparent 40%);
+  background-image: radial-gradient(circle at 12% 10%, rgba(77, 114, 145, 0.16), transparent 40%),
+    radial-gradient(circle at 88% 92%, rgba(183, 146, 76, 0.12), transparent 40%);
 }
 .invite-back-card .ib-logo {
   font-family: var(--font-serif);
@@ -1301,7 +1301,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(160deg, #16283f, #0a1420);
+  background: linear-gradient(160deg, #1c2028, #0a0c10);
   color: var(--offwhite);
 }
 .invite-door-left {
@@ -1481,7 +1481,7 @@ button {
 }
 .quiz-start {
   margin-top: 26px;
-  background: var(--accent1);
+  background: var(--ink);
   color: var(--offwhite);
   padding: 15px 30px;
   border-radius: 4px;
