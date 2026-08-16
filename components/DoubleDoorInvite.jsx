@@ -41,6 +41,58 @@ export default function DoubleDoorInvite() {
             <b>Presbyterian Church of Ghana · 1:00 PM</b>
             Kaneshie Congregation, Kaneshie, Accra
           </div>
+          <div className="ib-flowers" aria-hidden="true">
+            <svg viewBox="0 0 220 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M28,34 Q74,8 120,16 Q166,24 210,34"
+                stroke="#b7924c"
+                strokeWidth="1"
+                opacity="0.55"
+              />
+              <ellipse
+                cx="70"
+                cy="14"
+                rx="6"
+                ry="2.6"
+                fill="#b7924c"
+                opacity="0.35"
+                transform="rotate(-25 70 14)"
+              />
+              <ellipse
+                cx="168"
+                cy="21"
+                rx="6"
+                ry="2.6"
+                fill="#b7924c"
+                opacity="0.35"
+                transform="rotate(25 168 21)"
+              />
+              <g stroke="#b7924c" strokeWidth="0.9" opacity="0.75">
+                <circle cx="28" cy="29.5" r="2.3" />
+                <circle cx="32.28" cy="32.61" r="2.3" />
+                <circle cx="30.65" cy="37.64" r="2.3" />
+                <circle cx="25.35" cy="37.64" r="2.3" />
+                <circle cx="23.72" cy="32.61" r="2.3" />
+              </g>
+              <circle cx="28" cy="34" r="1.3" fill="#4d7291" />
+              <g stroke="#b7924c" strokeWidth="1" opacity="0.85">
+                <circle cx="120" cy="10.8" r="3" />
+                <circle cx="124.95" cy="14.4" r="3" />
+                <circle cx="123.06" cy="20.21" r="3" />
+                <circle cx="116.94" cy="20.21" r="3" />
+                <circle cx="115.05" cy="14.4" r="3" />
+              </g>
+              <circle cx="120" cy="16" r="1.6" fill="#4d7291" />
+              <g stroke="#b7924c" strokeWidth="0.9" opacity="0.75">
+                <circle cx="210" cy="29.5" r="2.3" />
+                <circle cx="214.28" cy="32.61" r="2.3" />
+                <circle cx="212.65" cy="37.64" r="2.3" />
+                <circle cx="207.35" cy="37.64" r="2.3" />
+                <circle cx="202.72" cy="32.61" r="2.3" />
+              </g>
+              <circle cx="210" cy="34" r="1.3" fill="#4d7291" />
+            </svg>
+          </div>
           {!open && <div className="ib-tap">TAP TO OPEN</div>}
         </div>
 

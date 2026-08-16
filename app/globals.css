@@ -1243,7 +1243,7 @@ button {
   box-shadow: 0 30px 60px rgba(35, 30, 20, 0.2), 0 0 0 1px rgba(183, 146, 76, 0.16);
 }
 .invite-back-card {
-  position: relative;
+  position: absolute;
   inset: 0;
   background: var(--offwhite);
   color: var(--ink);
@@ -1252,7 +1252,7 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 40px 34px;
+  padding: 40px 34px 56px;
   background-image: radial-gradient(circle at 12% 10%, rgba(77, 114, 145, 0.16), transparent 40%),
     radial-gradient(circle at 88% 92%, rgba(183, 146, 76, 0.12), transparent 40%);
 }
@@ -1296,6 +1296,15 @@ button {
   font-style: normal;
   font-size: 1rem;
   margin-bottom: 2px;
+}
+.invite-back-card .ib-flowers {
+  width: 130px;
+  margin-top: 22px;
+}
+.invite-back-card .ib-flowers svg {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 .invite-back-card .ib-tap {
   position: absolute;
