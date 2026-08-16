@@ -1255,6 +1255,25 @@ button {
   padding: 40px 34px 56px;
   background-image: radial-gradient(circle at 12% 10%, rgba(77, 114, 145, 0.16), transparent 40%),
     radial-gradient(circle at 88% 92%, rgba(183, 146, 76, 0.12), transparent 40%);
+  overflow: hidden;
+}
+.rose-corner {
+  position: absolute;
+  width: 155px;
+  height: 155px;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  z-index: 2;
+  object-fit: contain;
+}
+.rose-top-right {
+  top: -5px;
+  right: -5px;
+}
+.rose-bottom-left {
+  bottom: -5px;
+  left: -5px;
+  transform: rotate(180deg);
 }
 .invite-back-card::before {
   content: "";

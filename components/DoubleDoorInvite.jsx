@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import blueRosesCorner from "@/assets/blueRosesCorner.jpg";
 
 const EASE = [0.76, 0, 0.24, 1];
 
@@ -25,6 +27,18 @@ export default function DoubleDoorInvite() {
         data-cursor-hover
       >
         <div className="invite-back-card">
+          <Image
+            src={blueRosesCorner}
+            alt=""
+            className="rose-corner rose-top-right"
+            aria-hidden="true"
+          />
+          <Image
+            src={blueRosesCorner}
+            alt=""
+            className="rose-corner rose-bottom-left"
+            aria-hidden="true"
+          />
           <div className="ib-logo">A &amp; A</div>
           <p className="ib-formal">
             IN THE PRESENCE OF GOD AND OUR LOVED ONES, WE,
