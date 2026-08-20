@@ -54,8 +54,10 @@ export default function DoubleDoorInvite() {
             BLESS OUR MARRIAGE
           </p>
           <div className="ib-venue">
-            <b>Presbyterian Church of Ghana · 1:00 PM</b>
+            <b>Presbyterian Church of Ghana</b>
             Kaneshie Congregation, Kaneshie, Accra
+            <br />
+            <span className="ib-datetime">Saturday, October 10, 2026 at 1 PM</span>
           </div>
           <div className="ib-flowers" aria-hidden="true">
             <svg viewBox="0 0 220 50" fill="none" xmlns="http://www.w3.org/2000/svg">

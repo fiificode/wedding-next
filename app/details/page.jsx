@@ -18,15 +18,7 @@ const EVENTS = [
     text: "A celebration of heritage, customs, and color — honoring our roots with the families who raised us.",
     inviteOnly: true,
     img: traditionalWedding,
-    fields: [
-      ["DATE & TIME", "Friday, October 9", "10:00 AM"],
-      [
-        "VENUE",
-        "Presbyterian Church of Ghana",
-        "Kaneshie Congregation, Kaneshie, Accra",
-      ],
-      ["DRESS CODE", "[Traditional attire]", "[Notes on fabric / color]"],
-    ],
+    fields: [["DATE & TIME", "Friday, October 9", "10:00 AM"]],
     ph: "tph-3",
   },
   {
