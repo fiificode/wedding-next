@@ -113,22 +113,32 @@ export default function DetailsPage() {
           If you&apos;d like to coordinate with our palette, here&apos;s
           what we&apos;ll be wearing on the day.
         </p>
-        <div className="color-swatches">
-          <div className="color-swatch">
-            <span
-              className="color-circle"
-              style={{ background: "var(--accent1)" }}
-            />
-            <span className="color-swatch-label">Royal Blue</span>
+        {[
+          [
+            { hex: "#76CEFB", label: "Sky Blue" },
+            { hex: "#0C37B9", label: "Blue" },
+            { hex: "#122BA1", label: "Royal Blue" },
+            { hex: "#111A65", label: "Navy" },
+          ],
+          [
+            { hex: "#FFDE5D", label: "Butter Yellow" },
+            { hex: "#F8B302", label: "Gold" },
+            { hex: "#F8C820", label: "Golden Yellow" },
+            { hex: "#DE7C02", label: "Amber" },
+          ],
+        ].map((row, ri) => (
+          <div className="color-swatches" key={ri}>
+            {row.map((c) => (
+              <div className="color-swatch" key={c.hex}>
+                <span
+                  className="color-circle"
+                  style={{ background: c.hex }}
+                />
+                <span className="color-swatch-label">{c.label}</span>
+              </div>
+            ))}
           </div>
-          <div className="color-swatch">
-            <span
-              className="color-circle"
-              style={{ background: "var(--accent3)" }}
-            />
-            <span className="color-swatch-label">Gold</span>
-          </div>
-        </div>
+        ))}
       </div>
 
       <div

@@ -2,6 +2,7 @@ node_modules
 .next
 out
 .env*
+!.env.example
 .DS_Store
 
 # guest-uploaded photos/videos + manifest (user content, not source)
@@ -9,3 +10,6 @@ out
 !/public/guest-uploads/.gitkeep
 /data/guest-uploads.json
 /data/guestbook.json
+
+# ShipStudio metadata
+.shipstudio/

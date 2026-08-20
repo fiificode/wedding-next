@@ -118,7 +118,7 @@ export default function DoubleDoorInvite() {
             aria-label="Open venue location in Google Maps"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/qr-venue.svg" alt="" width={56} height={56} />
+            <img src="/qr-venue.svg" alt="" width={92} height={92} />
             <span>SCAN FOR MAP</span>
           </a>
           {!open && <div className="ib-tap">TAP TO OPEN</div>}

@@ -10,31 +10,41 @@ import couple from "@/assets/couple.jpg";
 import traditionalWedding from "@/assets/traditionalWedding.jpg";
 import friendsStory from "@/assets/friendsStory.jpg";
 import proposalStory from "@/assets/proposalStory.jpg";
+import firstMessages from "@/assets/firstMessages.png";
 
 const MOMENTS = [
   {
-    year: "2021",
+    year: "2020",
     tag: "The Beginning",
-    eyebrow: "IN AKOI'S WORDS",
+    eyebrow: "IN AFUA'S WORDS",
     title: "How We Met",
-    text: "Two paths in Accra, one unexpected meeting. What began as a chance introduction soon became the start of a story neither of us saw coming — and the one we'll be telling for the rest of our lives.",
+    text: "It was 21st May 2020, right in the middle of the COVID-19 lockdown, when I saw this very handsome gentleman on a friend's WhatsApp status — and it happened to be his birthday. I asked for his number, sent him a birthday message, and before the night was over we'd had our very first phone call. It didn't feel like talking to a stranger at all — the conversation flowed like we'd known each other for years.",
     callout: "Some meetings feel written in advance.",
+    img: firstMessages,
+  },
+  {
+    year: "2020",
+    tag: "First Meeting",
+    eyebrow: "TWO CITIES, ONE VISIT",
+    title: "Meeting in Person",
+    text: "We lived in different cities, so it took a little while to meet face to face. On 2nd July 2020, Nana Kofi came to Accra for a funeral and visited me at home — that day and the next gave us our very first real memories together.",
     img: couple,
   },
   {
     year: "2021",
-    tag: "The Same Day",
-    eyebrow: "THE GROWING BOND",
-    title: "From Strangers to Friends",
-    text: "What started as small talk became long conversations, shared laughter, and a friendship neither of us could imagine being without. Somewhere along the way, 'just friends' quietly turned into something more.",
+    tag: "Finding Our Way Back",
+    eyebrow: "THE RECONNECTION",
+    title: "Losing Touch, Finding Our Way Back",
+    text: "Life got in the way and we lost touch for a while. But our story wasn't finished — in March 2021, almost a year later, Nana Kofi came back to Accra, and somehow we found our way back to each other, reconnecting as friends as though we'd never lost touch at all.",
     img: friendsStory,
   },
   {
-    year: "2022",
-    tag: "Falling",
-    eyebrow: "IN AFUA'S WORDS",
-    title: "The First Date",
-    text: "An afternoon that felt like it was over before it began. Hours disappeared into conversation, and by the time we said goodbye, we both knew this wasn't a one-time thing — it was a beginning.",
+    year: "2021",
+    tag: "Forever Begins",
+    eyebrow: "THE QUESTION",
+    title: "Yes, I'll Be Your Girlfriend",
+    text: "On 4th July 2021, I accompanied him to the one-year anniversary of the very funeral that first brought him to Accra. The next day, 5th July 2021, Nana Kofi asked me to be his girlfriend — and just like that, a friendship that started with a WhatsApp status turned into a beautiful love story.",
+    callout: "One text can change your whole life.",
     img: traditionalWedding,
   },
   {

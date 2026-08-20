@@ -1394,27 +1394,27 @@ button {
 }
 .invite-back-card .ib-qr {
   position: absolute;
-  bottom: 18px;
-  right: 18px;
+  bottom: 16px;
+  right: 16px;
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
-  width: 72px;
+  gap: 6px;
+  width: 106px;
   pointer-events: auto;
 }
 .invite-back-card .ib-qr img {
-  width: 56px;
-  height: 56px;
-  padding: 5px;
+  width: 92px;
+  height: 92px;
+  padding: 6px;
   background: var(--offwhite);
   border: 1px solid rgba(183, 146, 76, 0.45);
   border-radius: 4px;
   box-shadow: 0 4px 12px rgba(35, 30, 20, 0.12);
 }
 .invite-back-card .ib-qr span {
-  font-size: 0.5rem;
+  font-size: 0.52rem;
   letter-spacing: 0.08em;
   line-height: 1.3;
   color: var(--muted);
@@ -1424,11 +1424,11 @@ button {
   .invite-back-card .ib-qr {
     bottom: 12px;
     right: 12px;
-    width: 58px;
+    width: 64px;
   }
   .invite-back-card .ib-qr img {
-    width: 44px;
-    height: 44px;
+    width: 50px;
+    height: 50px;
     padding: 4px;
   }
   .invite-back-card .ib-qr span {
@@ -1570,6 +1570,26 @@ button {
 }
 .rsvp-form button:hover {
   opacity: 0.85;
+}
+.rsvp-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.rsvp-form-error {
+  font-size: 0.8rem;
+  color: #b3413a;
+}
+.rsvp-sent {
+  text-align: center;
+  padding: 32px 28px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.rsvp-sent p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.6;
 }
 
 .rsvp-contact {
@@ -1883,146 +1903,47 @@ textarea.guest-input {
 }
 
 /* ---------- vendor info ---------- */
-.vendor-section-title {
-  text-align: center;
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 1.3rem;
-}
-.vendor-contact {
-  max-width: 480px;
-  margin: 0 auto;
-  text-align: center;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 32px 28px;
-}
-.chapter.on-dark .vendor-contact {
-  border-color: rgba(255, 255, 255, 0.14);
-}
-.vendor-contact .eyebrow {
-  justify-content: center;
-}
-.vendor-contact h4 {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  margin-top: 8px;
-}
-.vendor-contact-role {
-  font-size: 0.8rem;
-  color: var(--muted);
-  margin-top: 2px;
-}
-.vendor-contact-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px 18px;
-  margin-top: 18px;
-  font-size: 0.85rem;
-}
-.vendor-contact-links a:hover {
-  color: var(--accent1);
-}
-
-.vendor-timeline {
-  margin-top: 90px;
-}
-.vendor-day {
-  margin-top: 46px;
-}
-.vendor-day-head {
-  text-align: center;
-  margin-bottom: 26px;
-}
-.vendor-day-date {
-  font-size: 0.72rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--accent1);
-}
-.vendor-day-label {
-  font-family: var(--font-serif);
-  font-size: 1.6rem;
-  margin-top: 4px;
-}
-.vendor-schedule {
-  display: flex;
-  flex-direction: column;
-  border-top: 1px solid var(--border);
-  max-width: 640px;
-  margin: 0 auto;
-}
-.chapter.on-dark .vendor-schedule {
-  border-color: rgba(255, 255, 255, 0.14);
-}
-.vendor-row {
-  display: grid;
-  grid-template-columns: 110px 1fr;
-  gap: 18px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--border);
-}
-.chapter.on-dark .vendor-row {
-  border-color: rgba(255, 255, 255, 0.14);
-}
-.vendor-row-time {
-  font-family: var(--font-serif);
-  font-style: italic;
-  color: var(--accent2);
-}
-.vendor-row-event {
-  font-size: 0.95rem;
-}
-.vendor-row-note {
-  font-size: 0.78rem;
-  color: var(--muted);
-  margin-top: 2px;
-}
-
-.vendor-venues {
-  margin-top: 30px;
+.vendor-grid {
+  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
+  gap: 22px;
 }
-.vendor-venue-card {
+.vendor-card {
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 26px 24px;
 }
-.chapter.on-dark .vendor-venue-card {
+.chapter.on-dark .vendor-card {
   border-color: rgba(255, 255, 255, 0.14);
 }
-.vendor-venue-card h5 {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-}
-.vendor-venue-card .vv-sub {
-  font-size: 0.82rem;
-  color: var(--muted);
-  margin-top: 4px;
-}
-.vendor-venue-card ul {
-  margin-top: 16px;
+.vendor-card-people {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  list-style: none;
 }
-.vendor-venue-card li {
-  font-size: 0.85rem;
-  padding-left: 14px;
-  position: relative;
+.vendor-card-person + .vendor-card-person {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
 }
-.vendor-venue-card li::before {
-  content: "–";
-  position: absolute;
-  left: 0;
+.chapter.on-dark .vendor-card-person + .vendor-card-person {
+  border-color: rgba(255, 255, 255, 0.14);
+}
+.vendor-card-name {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+}
+.vendor-card-contacts {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  font-size: 0.82rem;
+}
+.vendor-card-contacts a {
   color: var(--muted);
 }
-
-.vendor-download {
-  margin-top: 60px;
-  text-align: center;
+.vendor-card-contacts a:hover {
+  color: var(--accent1);
 }
